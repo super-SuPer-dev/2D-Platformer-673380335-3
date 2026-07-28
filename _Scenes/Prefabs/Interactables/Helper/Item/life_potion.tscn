@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://du44twcpnm12o" path="res://_Scripts/life_potion.gd" id="1_77381"]
 [ext_resource type="Texture2D" uid="uid://cmy5hg7lr4tmg" path="res://_Assets/Spritesheet/PotionRed.png" id="2_ng5p1"]
-[ext_resource type="Texture2D" uid="uid://621as0fwjhum" path="res://_Assets/Textures/etc/star_07.png" id="3_co4k6"]
+[ext_resource type="Texture2D" uid="uid://dsqhpet4dfpn8" path="res://_Assets/Spritesheet/bullet.png" id="3_xy577"]
 
 [sub_resource type="Animation" id="Animation_4q5vp"]
 length = 0.001
@@ -90,7 +90,7 @@ texture = ExtResource("2_ng5p1")
 
 [node name="CoinSparkles" type="CPUParticles2D" parent="CollisionPolygon2D" unique_id=1937929060]
 amount = 50
-texture = ExtResource("3_co4k6")
+texture = ExtResource("3_xy577")
 direction = Vector2(0, 0)
 spread = 180.0
 gravity = Vector2(0, 0)

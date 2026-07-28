@@ -8,8 +8,4 @@ func _on_pressed() -> void:
 	if play:
 		GameManager.full_restart()
 		return
-	if exitToScene != null:
-		SceneTransition.load_scene(exitToScene)
-	else:
-		SceneTransition.load_scene(load("res://_Scenes/Levels/menu.tscn"))
-		
+	SceneTransition.load_scene(load("res://_Scenes/Levels/menu.tscn"))

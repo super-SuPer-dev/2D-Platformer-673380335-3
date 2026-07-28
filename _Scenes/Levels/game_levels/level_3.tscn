@@ -13,12 +13,14 @@
 [ext_resource type="Texture2D" uid="uid://ca2dy1eoumt1f" path="res://_Assets/Textures/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="6_5ero1"]
 [ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://_Scenes/Prefabs/theme.tres" id="6_hbtbb"]
 [ext_resource type="PackedScene" uid="uid://7oxbgu64i56r" path="res://_Scenes/Prefabs/Interactables/Helper/Item/jump_potion.tscn" id="7_43sbf"]
-[ext_resource type="AudioStream" uid="uid://b6qosmsqr2bg3" path="res://_Assets/Sound/Musics/The-Coin-Op-Conquistador.mp3" id="7_ll78k"]
 [ext_resource type="PackedScene" uid="uid://cqs760tu65ofn" path="res://_Scenes/Actors/monster_slim2.tscn" id="8_8na01"]
 [ext_resource type="PackedScene" uid="uid://dabag2r57aued" path="res://_Scenes/Prefabs/Interactables/Helper/Item/heal_potion.tscn" id="9_8lred"]
 [ext_resource type="PackedScene" uid="uid://bp4l1nlnh8oq1" path="res://_Scenes/Prefabs/Interactables/Traps/trap_2.tscn" id="11_fqdub"]
 [ext_resource type="PackedScene" uid="uid://rg0efoa2qhth" path="res://_Scenes/Prefabs/Interactables/Helper/Item/life_potion.tscn" id="12_mdtri"]
 [ext_resource type="PackedScene" uid="uid://dm5q6ssll8jo7" path="res://_Scenes/Prefabs/Interactables/Helper/Item/speed_potion.tscn" id="13_hbtbb"]
+[ext_resource type="PackedScene" uid="uid://dqocdd23rrnsn" path="res://_Scenes/Prefabs/Collectables/Point/coin.tscn" id="14_4lett"]
+[ext_resource type="AudioStream" uid="uid://cvwled7ynlj5j" path="res://_Assets/Sound/bgm.ogg" id="15_4lett"]
+[ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://_Scenes/Prefabs/Collectables/Point/gem.tscn" id="21_ap4hm"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_x6yti"]
 
@@ -207,12 +209,44 @@ position = Vector2(414, -607)
 [node name="JumpPotion2" parent="Text" unique_id=1705729849 instance=ExtResource("7_43sbf")]
 position = Vector2(494, -607)
 
+[node name="Coin" parent="Text" unique_id=251510796 instance=ExtResource("14_4lett")]
+position = Vector2(-240, 376)
+
+[node name="Coin2" parent="Text" unique_id=1140503666 instance=ExtResource("14_4lett")]
+position = Vector2(-174, 378)
+
+[node name="Coin3" parent="Text" unique_id=1015932287 instance=ExtResource("14_4lett")]
+position = Vector2(-109, 378)
+
+[node name="Coin4" parent="Text" unique_id=999977414 instance=ExtResource("14_4lett")]
+position = Vector2(440, 440)
+
+[node name="Coin5" parent="Text" unique_id=1011633297 instance=ExtResource("14_4lett")]
+position = Vector2(496, 440)
+
+[node name="Coin6" parent="Text" unique_id=472864514 instance=ExtResource("14_4lett")]
+position = Vector2(560, 440)
+
+[node name="Coin7" parent="Text" unique_id=860177150 instance=ExtResource("14_4lett")]
+position = Vector2(1352, 256)
+
+[node name="Coin8" parent="Text" unique_id=1469483721 instance=ExtResource("14_4lett")]
+position = Vector2(1464, 256)
+
+[node name="Coin9" parent="Text" unique_id=2067817601 instance=ExtResource("14_4lett")]
+position = Vector2(2720, -120)
+
+[node name="Coin10" parent="Text" unique_id=1366355061 instance=ExtResource("14_4lett")]
+position = Vector2(2592, -120)
+
+[node name="Coin11" parent="Text" unique_id=2003794540 instance=ExtResource("14_4lett")]
+position = Vector2(2840, -120)
+
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1580159016]
-stream = ExtResource("7_ll78k")
+stream = ExtResource("15_4lett")
 volume_db = -5.0
 autoplay = true
 bus = &"music"
-parameters/looping = true
 
 [node name="KillZone" type="Area2D" parent="." unique_id=898712258]
 position = Vector2(47, 952)
@@ -263,6 +297,42 @@ position = Vector2(3720, -178)
 
 [node name="LifePotion2" parent="." unique_id=545155813 instance=ExtResource("13_hbtbb")]
 position = Vector2(-683, 372)
+
+[node name="gem" parent="." unique_id=443172504 instance=ExtResource("21_ap4hm")]
+position = Vector2(3520, -176)
+
+[node name="gem2" parent="." unique_id=1390714831 instance=ExtResource("21_ap4hm")]
+position = Vector2(3456, -176)
+
+[node name="Coin" parent="." unique_id=73831473 instance=ExtResource("14_4lett")]
+position = Vector2(952, -640)
+
+[node name="Coin2" parent="." unique_id=1791937712 instance=ExtResource("14_4lett")]
+position = Vector2(1056, -728)
+
+[node name="Coin3" parent="." unique_id=2100460382 instance=ExtResource("14_4lett")]
+position = Vector2(1192, -792)
+
+[node name="Coin4" parent="." unique_id=1330986219 instance=ExtResource("14_4lett")]
+position = Vector2(1920, -728)
+
+[node name="Coin5" parent="." unique_id=469702149 instance=ExtResource("14_4lett")]
+position = Vector2(1944, -272)
+
+[node name="Coin6" parent="." unique_id=1351105457 instance=ExtResource("14_4lett")]
+position = Vector2(2080, -208)
+
+[node name="Coin7" parent="." unique_id=1097502430 instance=ExtResource("14_4lett")]
+position = Vector2(2192, -144)
+
+[node name="gem3" parent="." unique_id=1156464685 instance=ExtResource("21_ap4hm")]
+position = Vector2(2816, -848)
+
+[node name="gem4" parent="." unique_id=123194609 instance=ExtResource("21_ap4hm")]
+position = Vector2(2888, -848)
+
+[node name="gem5" parent="." unique_id=294852075 instance=ExtResource("21_ap4hm")]
+position = Vector2(2752, -848)
 
 [connection signal="hit_enemy" from="Player" to="." method="_on_player_hit_enemy"]
 [connection signal="hit_trap" from="Player" to="." method="_on_player_hit_trap"]

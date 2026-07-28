@@ -12,9 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://bjqv6yr03ligl" path="res://_Assets/Textures/1 - Grassland/Background parts/2 - Hills.png" id="5_8lh2j"]
 [ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://_Scenes/Prefabs/theme.tres" id="6_8lh2j"]
 [ext_resource type="Texture2D" uid="uid://ca2dy1eoumt1f" path="res://_Assets/Textures/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="6_deayn"]
-[ext_resource type="AudioStream" uid="uid://b6qosmsqr2bg3" path="res://_Assets/Sound/Musics/The-Coin-Op-Conquistador.mp3" id="8_te7oc"]
 [ext_resource type="PackedScene" uid="uid://cqs760tu65ofn" path="res://_Scenes/Actors/monster_slim2.tscn" id="9_t6c35"]
 [ext_resource type="PackedScene" uid="uid://bs70y1kitjd3r" path="res://_Scenes/Actors/enemy_spawn.tscn" id="14_oyepl"]
+[ext_resource type="PackedScene" uid="uid://uahmki0g4j1h" path="res://_Scenes/Prefabs/Collectables/Weapon/bomb.tscn" id="15_7fsea"]
+[ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://_Scenes/Prefabs/Collectables/Point/gem.tscn" id="16_8lh2j"]
+[ext_resource type="AudioStream" uid="uid://cvwled7ynlj5j" path="res://_Assets/Sound/bgm.ogg" id="17_8lh2j"]
+[ext_resource type="PackedScene" uid="uid://dqocdd23rrnsn" path="res://_Scenes/Prefabs/Collectables/Point/coin.tscn" id="18_8lh2j"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_x6yti"]
 
@@ -88,7 +91,7 @@ texture = ExtResource("6_deayn")
 [node name="LevelFinishDoor" parent="." unique_id=1788542095 instance=ExtResource("2_oyepl")]
 z_index = 1
 texture_filter = 1
-position = Vector2(-1808.0001, 344.00003)
+position = Vector2(-2376, 335)
 scale = Vector2(1.503324, 1.503324)
 next_scene = ExtResource("3_s3n32")
 
@@ -338,12 +341,29 @@ offset_right = -767.0
 offset_bottom = 275.0
 text = "There are too many of them!"
 
+[node name="Bomb" parent="Text" unique_id=131075404 instance=ExtResource("15_7fsea")]
+position = Vector2(-78, 363)
+
+[node name="gem" parent="Text" unique_id=251510796 instance=ExtResource("16_8lh2j")]
+position = Vector2(-136, 373)
+
+[node name="gem2" parent="Text" unique_id=167180424 instance=ExtResource("16_8lh2j")]
+position = Vector2(-13, 377)
+
+[node name="gem3" parent="Text" unique_id=1089143266 instance=ExtResource("16_8lh2j")]
+position = Vector2(-134, 300)
+
+[node name="gem4" parent="Text" unique_id=1362346063 instance=ExtResource("16_8lh2j")]
+position = Vector2(-76, 295)
+
+[node name="gem5" parent="Text" unique_id=2052381787 instance=ExtResource("16_8lh2j")]
+position = Vector2(-7, 294)
+
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1580159016]
-stream = ExtResource("8_te7oc")
+stream = ExtResource("17_8lh2j")
 volume_db = -5.0
 autoplay = true
 bus = &"music"
-parameters/looping = true
 
 [node name="KillZone" type="Area2D" parent="." unique_id=898712258]
 position = Vector2(47, 952)
@@ -352,6 +372,27 @@ collision_mask = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=894546188]
 position = Vector2(1093, 745)
 shape = SubResource("WorldBoundaryShape2D_x6yti")
+
+[node name="Coin" parent="." unique_id=1657921938 instance=ExtResource("18_8lh2j")]
+position = Vector2(-1752, 367)
+
+[node name="Coin2" parent="." unique_id=756685203 instance=ExtResource("18_8lh2j")]
+position = Vector2(-1595, 354)
+
+[node name="Coin3" parent="." unique_id=1166433040 instance=ExtResource("18_8lh2j")]
+position = Vector2(-1467, 357)
+
+[node name="Coin4" parent="." unique_id=1633570692 instance=ExtResource("18_8lh2j")]
+position = Vector2(-1322, 357)
+
+[node name="Coin5" parent="." unique_id=48064005 instance=ExtResource("18_8lh2j")]
+position = Vector2(-1161, 352)
+
+[node name="Coin6" parent="." unique_id=1589686709 instance=ExtResource("18_8lh2j")]
+position = Vector2(-1902, 364)
+
+[node name="Coin7" parent="." unique_id=397322067 instance=ExtResource("18_8lh2j")]
+position = Vector2(-2105, 361)
 
 [connection signal="hit_enemy" from="Player" to="." method="_on_player_hit_enemy"]
 [connection signal="hit_trap" from="Player" to="." method="_on_player_hit_trap"]

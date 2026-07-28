@@ -2,13 +2,7 @@
 
 [ext_resource type="Script" uid="uid://yb3xc5i7l4te" path="res://_Scripts/splash_screen.gd" id="1_xulbl"]
 [ext_resource type="PackedScene" uid="uid://b6tvaxw54wsq0" path="res://_Scenes/Levels/menu.tscn" id="2_io75p"]
-[ext_resource type="Texture2D" uid="uid://t7c8gkya77p4" path="res://docs/index.apple-touch-icon.png" id="2_yr7ah"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwjmf"]
-bg_color = Color(0.27387273, 0.27387276, 0.27387264, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3elyr"]
-bg_color = Color(0, 0.78267086, 0.29200193, 1)
+[ext_resource type="Texture2D" uid="uid://cjs3imxjojaay" path="res://_Assets/Textures/Screenshot 2026-07-28 192403.png" id="3_7txmh"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_io75p"]
 load_path = "res://.godot/imported/cpkku_dark.png-c1bda54704d79be2a1fc1b826c496161.ctex"
@@ -33,29 +27,11 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1406585221]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -512.0
-offset_top = -96.0
-offset_right = 512.0
-offset_bottom = -45.544983
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 28
-theme_override_styles/background = SubResource("StyleBoxFlat_dwjmf")
-theme_override_styles/fill = SubResource("StyleBoxFlat_3elyr")
-value = 40.0
-
 [node name="Label" type="Label" parent="." unique_id=1658049118]
 layout_mode = 0
-offset_top = 512.0
+offset_top = 544.0
 offset_right = 1280.0
-offset_bottom = 595.0
+offset_bottom = 627.0
 theme_override_font_sizes/font_size = 60
 text = "LAB05 - 2D Game"
 horizontal_alignment = 1
@@ -78,10 +54,19 @@ grow_vertical = 2
 texture = SubResource("CompressedTexture2D_io75p")
 stretch_mode = 4
 
-[node name="TextureRect2" type="TextureRect" parent="." unique_id=1409110543]
-layout_mode = 0
-offset_left = 464.0
-offset_top = 168.0
-offset_right = 816.0
-offset_bottom = 472.0
-texture = ExtResource("2_yr7ah")
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1532832176]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.0
+offset_top = -168.0
+offset_right = 216.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_7txmh")
+expand_mode = 1

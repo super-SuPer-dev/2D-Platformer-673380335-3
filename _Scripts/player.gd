@@ -4,9 +4,7 @@ extends CharacterBody2D
 signal hit_enemy
 signal hit_trap
 
-
 # --------- VARIABLES ---------- #
-
 @export_category("Player Properties") # You can tweak these changes according to your likings
 @export var move_speed : float = 600
 @export var jump_force : float = 600
@@ -34,8 +32,6 @@ var can_damage = true
 #@onready var player_node = $student
 @onready var player_node = $PlayerBody
 @onready var bullet_marker = $BulletMarker
-
-
 
 @onready var particle_trails = $ParticleTrails
 @onready var death_particles = $DeathParticles
@@ -106,11 +102,11 @@ func player_animations():
 	if is_on_floor():
 		if abs(velocity.x) > 0:
 			particle_trails.emitting = true
-			player_sprite.current_animation = "REST" # Walk
+			player_sprite.current_animation = "Walk" # Walk
 		else:
-			player_sprite.current_animation = "REST" # Idle
+			player_sprite.current_animation = "Idle" # Idle
 	else:
-		player_sprite.current_animation = "REST" # Jump
+		player_sprite.current_animation = "Jump" # Jump
 
 
 # Flip player sprite based on X velocity
@@ -187,7 +183,7 @@ func handle_shooting(type: String):
 		var sign_x = 1.0 if player_node.scale.x > 0 else -1.0
 		var dir = Vector2(cos(angle) * sign_x, -sin(angle))
 		get_parent().add_child(bullet)
-		bullet.shoot(dir, 20, bullet_lifetime)
+		bullet.shoot(dir, 300, bullet_lifetime)
 		shoot_cooldown_timer = shoot_cooldown_time
 	
 
@@ -195,7 +191,7 @@ func shoot():
 	if bullet_scene == null:
 		return
 	is_attacking = true
-	player_sprite.play("REST") # Attack
+	player_sprite.play("Attack") # Attack
 	AudioManager.shoot_sfx.play()
 	var bullet = bullet_scene.instantiate()
 	bullet.global_position = bullet_marker.global_position

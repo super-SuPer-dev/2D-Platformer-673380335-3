@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://3hs7ylluioxv"]
+
+[ext_resource type="Script" uid="uid://h5v1dwdrfh7g" path="res://_Scenes/Prefabs/Interactables/Helper/jump_pad.gd" id="1_fv4uj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwjmf"]
+size = Vector2(98, 20)
+
+[node name="JumpPad" type="Node2D" unique_id=1949625588]
+script = ExtResource("1_fv4uj")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1145761966]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1828399478]
+shape = SubResource("RectangleShape2D_dwjmf")
+debug_color = Color(4.1392445e-06, 0.64874595, 0.18077826, 0.41960785)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

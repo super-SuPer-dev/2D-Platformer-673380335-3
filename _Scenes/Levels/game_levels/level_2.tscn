@@ -14,7 +14,9 @@
 [ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://_Scenes/Prefabs/theme.tres" id="6_weihq"]
 [ext_resource type="PackedScene" uid="uid://cqs760tu65ofn" path="res://_Scenes/Actors/monster_slim2.tscn" id="8_hrqyo"]
 [ext_resource type="PackedScene" uid="uid://dabag2r57aued" path="res://_Scenes/Prefabs/Interactables/Helper/Item/heal_potion.tscn" id="9_408ju"]
-[ext_resource type="AudioStream" uid="uid://b6qosmsqr2bg3" path="res://_Assets/Sound/Musics/The-Coin-Op-Conquistador.mp3" id="10_14uvl"]
+[ext_resource type="PackedScene" uid="uid://dqocdd23rrnsn" path="res://_Scenes/Prefabs/Collectables/Point/coin.tscn" id="13_h8oud"]
+[ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://_Scenes/Prefabs/Collectables/Point/gem.tscn" id="14_gtnpm"]
+[ext_resource type="AudioStream" uid="uid://cvwled7ynlj5j" path="res://_Assets/Sound/bgm.ogg" id="15_h8oud"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_x6yti"]
 
@@ -224,12 +226,35 @@ offset_right = 2240.0
 offset_bottom = 528.0
 text = "Enter the door."
 
+[node name="Coin" parent="Text" unique_id=251510796 instance=ExtResource("13_h8oud")]
+position = Vector2(-212, 436)
+
+[node name="Coin2" parent="Text" unique_id=372237851 instance=ExtResource("13_h8oud")]
+position = Vector2(-127, 438)
+
+[node name="Coin3" parent="Text" unique_id=2048415167 instance=ExtResource("13_h8oud")]
+position = Vector2(-37, 438)
+
+[node name="Coin4" parent="Text" unique_id=1265718767 instance=ExtResource("13_h8oud")]
+position = Vector2(60, 438)
+
+[node name="Coin5" parent="Text" unique_id=442971205 instance=ExtResource("13_h8oud")]
+position = Vector2(752, 788)
+
+[node name="Coin6" parent="Text" unique_id=388789204 instance=ExtResource("13_h8oud")]
+position = Vector2(684, 787)
+
+[node name="Coin7" parent="Text" unique_id=510739301 instance=ExtResource("13_h8oud")]
+position = Vector2(1438, 919)
+
+[node name="gem" parent="Text" unique_id=1137845890 instance=ExtResource("14_gtnpm")]
+position = Vector2(2061, 676)
+
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1580159016]
-stream = ExtResource("10_14uvl")
+stream = ExtResource("15_h8oud")
 volume_db = -5.0
 autoplay = true
 bus = &"music"
-parameters/looping = true
 
 [node name="KillZone" type="Area2D" parent="." unique_id=898712258]
 position = Vector2(47, 952)

@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://cuq7vusmo7y5g"]
 
+[ext_resource type="Texture2D" uid="uid://b5h7eiwj15cc7" path="res://_Assets/Textures/Screenshot 2026-07-28 192826.png" id="1_qv2wo"]
+[ext_resource type="Texture2D" uid="uid://bvwpluptakdsp" path="res://_Assets/Textures/Screenshot 2026-07-28 192709.png" id="2_wdymt"]
 [ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://_Scenes/Prefabs/theme.tres" id="2_wto1r"]
 [ext_resource type="Script" uid="uid://epbyy3rluw1" path="res://_Scripts/sfx.gd" id="3_2cf2s"]
+[ext_resource type="Texture2D" uid="uid://cjs3imxjojaay" path="res://_Assets/Textures/Screenshot 2026-07-28 192403.png" id="3_msgao"]
 [ext_resource type="Script" uid="uid://bkdx2b31oiwo1" path="res://_Scenes/Levels/UI/button.gd" id="4_4s1sb"]
 [ext_resource type="Script" uid="uid://4286tlewqvvi" path="res://_Scripts/music.gd" id="4_diiku"]
 
@@ -12,6 +15,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Screenshot20260728192826" type="Sprite2D" parent="." unique_id=1813899097]
+position = Vector2(995, 367)
+texture = ExtResource("1_qv2wo")
+
+[node name="Screenshot20260728192709" type="Sprite2D" parent="." unique_id=1839064299]
+position = Vector2(203.00002, 221.00002)
+scale = Vector2(0.51684535, 0.62468195)
+texture = ExtResource("2_wdymt")
+
+[node name="Screenshot20260728192403" type="Sprite2D" parent="." unique_id=649068304]
+position = Vector2(181, 603)
+scale = Vector2(0.33603895, 0.34042552)
+texture = ExtResource("3_msgao")
 
 [node name="Title" type="Label" parent="." unique_id=714304452]
 layout_mode = 1
@@ -32,30 +49,30 @@ vertical_alignment = 1
 
 [node name="SFX" type="Button" parent="." unique_id=1757350007]
 layout_mode = 0
-offset_left = 355.0
-offset_top = 159.0
-offset_right = 429.0
-offset_bottom = 221.0
+offset_left = 603.0
+offset_top = 249.0
+offset_right = 730.0
+offset_bottom = 394.0
 text = "SFX
 "
 script = ExtResource("3_2cf2s")
 
 [node name="MUSIC" type="Button" parent="." unique_id=395141462]
 layout_mode = 0
-offset_left = 356.0
-offset_top = 230.0
-offset_right = 427.0
-offset_bottom = 305.0
+offset_left = 423.0
+offset_top = 242.0
+offset_right = 545.0
+offset_bottom = 397.0
 text = "Music
 "
 script = ExtResource("4_diiku")
 
 [node name="Button" type="Button" parent="." unique_id=550010226]
 layout_mode = 0
-offset_left = 617.0
-offset_top = 156.0
-offset_right = 662.0
-offset_bottom = 187.0
+offset_left = 429.0
+offset_top = 96.0
+offset_right = 788.0
+offset_bottom = 168.0
 text = "Back
 "
 script = ExtResource("4_4s1sb")

@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cb8e62red7kc0" path="res://_Scenes/Prefabs/Interactables/Traps/trap_1.tscn" id="7_2x1t5"]
 [ext_resource type="PackedScene" uid="uid://dqocdd23rrnsn" path="res://_Scenes/Prefabs/Collectables/Point/coin.tscn" id="8_x6yti"]
 [ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://_Scenes/Prefabs/Collectables/Point/gem.tscn" id="9_1vvgg"]
-[ext_resource type="AudioStream" uid="uid://b6qosmsqr2bg3" path="res://_Assets/Sound/Musics/The-Coin-Op-Conquistador.mp3" id="10_x6yti"]
+[ext_resource type="AudioStream" uid="uid://cvwled7ynlj5j" path="res://_Assets/Sound/bgm.ogg" id="16_wpgi2"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_x6yti"]
 
@@ -244,11 +244,10 @@ text = "Enter the door."
 position = Vector2(644, 456)
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1580159016]
-stream = ExtResource("10_x6yti")
+stream = ExtResource("16_wpgi2")
 volume_db = -5.0
 autoplay = true
 bus = &"music"
-parameters/looping = true
 
 [node name="KillZone" type="Area2D" parent="." unique_id=898712258]
 position = Vector2(1458, 1402)

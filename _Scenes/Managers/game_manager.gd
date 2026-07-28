@@ -3,6 +3,7 @@ extends Node2D
 # Signals
 signal player_data_changed
 signal fire_attack(type: String)
+signal weapon_updated
 
 # Player Data
 var god : bool = false
@@ -26,8 +27,8 @@ var current_level : String
 var save_path := "user://game.save"
 
 const NON_SAVE_SCENES := [
-	"res://_Scenes/Levels/game_over.tscn",
-	"res://_Scenes/Levels/game_win.tscn",
+	"res://_Scenes/Levels/UI/game_over.tscn",
+	"res://_Scenes/Levels/UI/game_win.tscn",
 	"res://_Scenes/Levels/menu.tscn",
 ]
 
@@ -45,6 +46,9 @@ func add_life():
 	if life < max_life:
 		life += 1
 	player_data_changed.emit()
+	
+func add_weapon():
+	weapon_updated.emit()
 
 func load_level(scene: PackedScene):
 	SceneTransition.load_scene(scene)
@@ -81,7 +85,7 @@ func death():
 	life -= 1
 	player_data_changed.emit()
 	if life <= 0:
-		get_tree().change_scene_to_file("res://_Scenes/Levels/game_over.tscn")
+		get_tree().change_scene_to_file("res://_Scenes/Levels/UI/game_over.tscn")
 
 func save_option():
 	var file = FileAccess.open("user://option.json", FileAccess.WRITE)

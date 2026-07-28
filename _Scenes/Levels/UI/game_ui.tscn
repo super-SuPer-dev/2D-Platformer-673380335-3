@@ -3,18 +3,19 @@
 [ext_resource type="Script" uid="uid://domyi75bwl5ad" path="res://_Scripts/game_ui.gd" id="1_1ns3y"]
 [ext_resource type="FontFile" uid="uid://dotjapgh3ccvq" path="res://_Assets/Fonts/VT323/VT323-Regular.ttf" id="2_xb8yn"]
 [ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://_Scenes/Prefabs/theme.tres" id="3_dhn3v"]
-[ext_resource type="Texture2D" uid="uid://piisp82qy5kj" path="res://_Assets/Spritesheet/GemYellow.png" id="4_ea4w6"]
+[ext_resource type="Texture2D" uid="uid://2wfiy300hbbt" path="res://_Assets/Icons/icons8-save-50.png" id="4_xb8yn"]
 [ext_resource type="Texture2D" uid="uid://ddv4aoj15q5pe" path="res://_Assets/Icons/icons8-audio-48.png" id="5_qviey"]
 [ext_resource type="Texture2D" uid="uid://i80o4wno5dnx" path="res://_Assets/Icons/icons8-mute-48.png" id="6_trndx"]
 [ext_resource type="Texture2D" uid="uid://ctp5xew3mi5hs" path="res://_Assets/Icons/icons8-music-48.png" id="7_gndta"]
 [ext_resource type="Texture2D" uid="uid://djscvie6h1kd5" path="res://_Assets/Icons/icons8-cancel-48.png" id="8_4c7qy"]
 [ext_resource type="PackedScene" uid="uid://puc4l62gx6et" path="res://_Scenes/Prefabs/Uis/button_exit.tscn" id="9_dv2rr"]
 [ext_resource type="Texture2D" uid="uid://cs52s37v04q41" path="res://_Assets/Icons/icons8-heart-48.png" id="10_1evx5"]
-[ext_resource type="Texture2D" uid="uid://c14r70talvlty" path="res://_Assets/Icons/icons8-arrow-left-50.png" id="11_ymn0g"]
-[ext_resource type="Texture2D" uid="uid://dbdk5x30xx2t4" path="res://_Assets/Icons/icons8-up-50.png" id="12_a87ul"]
-[ext_resource type="Texture2D" uid="uid://m44t4aut6o62" path="res://_Assets/Icons/icons8-arrow-right-50.png" id="13_fqnwt"]
-[ext_resource type="Texture2D" uid="uid://b7f4d7rpedxw3" path="res://_Assets/Spritesheet/WandT2.png" id="14_vex4h"]
+[ext_resource type="Texture2D" uid="uid://cggerorxg21wm" path="res://_Assets/Icons/my/ArrowBrownOuline22.png" id="11_ea4w6"]
+[ext_resource type="Texture2D" uid="uid://dxdp1ecwmhy3s" path="res://_Assets/Icons/my/ArrowBrownOuline20.png" id="12_qviey"]
+[ext_resource type="Texture2D" uid="uid://bsgtrwi2u40ld" path="res://_Assets/Icons/my/ArrowBrownOuline23.png" id="13_trndx"]
+[ext_resource type="Texture2D" uid="uid://bn7p1ettcrj43" path="res://_Assets/Spritesheet/spear.png" id="14_gndta"]
 [ext_resource type="Script" uid="uid://b31134vrebygx" path="res://_Scripts/cli.gd" id="15_kmjyb"]
+[ext_resource type="Texture2D" uid="uid://ckuiu550h8klt" path="res://_Assets/Icons/icons8-pencil-94.png" id="15_xb8yn"]
 
 [sub_resource type="Animation" id="Animation_3cagf"]
 length = 0.001
@@ -55,10 +56,10 @@ grow_horizontal = 2
 [node name="ScoreLabel" type="Label" parent="GameUI/TopBar" unique_id=1067951808]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 16.0
-offset_top = 63.0
-offset_right = 186.0
-offset_bottom = 105.0
+offset_left = 11.0
+offset_top = 12.0
+offset_right = 181.0
+offset_bottom = 64.0
 theme_override_colors/font_color = Color(0.910156, 0.730469, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 10
@@ -72,10 +73,10 @@ autoplay = &"welcome"
 
 [node name="HpRect" type="ColorRect" parent="GameUI/TopBar" unique_id=987609954]
 layout_mode = 0
-offset_left = 288.0
-offset_top = 73.0
-offset_right = 556.8675
-offset_bottom = 108.01694
+offset_left = 283.0
+offset_top = 22.0
+offset_right = 551.8675
+offset_bottom = 57.016937
 scale = Vector2(1.1790193, 1.0851891)
 
 [node name="ProgressBar" type="ProgressBar" parent="GameUI/TopBar/HpRect" unique_id=306194423]
@@ -96,10 +97,10 @@ metadata/_edit_lock_ = true
 [node name="HPLabel" type="Label" parent="GameUI/TopBar" unique_id=2043418135]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 216.0
-offset_top = 63.0
-offset_right = 261.0
-offset_bottom = 105.0
+offset_left = 211.0
+offset_top = 12.0
+offset_right = 256.0
+offset_bottom = 64.0
 theme_override_colors/font_color = Color(0, 0.7294118, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 10
@@ -108,17 +109,18 @@ theme_override_font_sizes/font_size = 51
 text = "HP"
 
 [node name="btnSave" type="Button" parent="GameUI/TopBar" unique_id=196490803]
+modulate = Color(0, 0.5388952, 0.95836884, 1)
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -80.0
-offset_top = 12.0
-offset_right = -8.0
-offset_bottom = 84.0
+offset_top = 23.0
+offset_right = -22.0
+offset_bottom = 81.0
 grow_horizontal = 0
 focus_mode = 0
-icon = ExtResource("4_ea4w6")
+icon = ExtResource("4_xb8yn")
 
 [node name="btnSound" type="Button" parent="GameUI/TopBar" unique_id=167811641]
 layout_mode = 1
@@ -190,10 +192,10 @@ text = "HP"
 
 [node name="LifeRect" type="TextureRect" parent="GameUI/TopBar" unique_id=1631342937]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 10.0
-offset_right = 64.0
-offset_bottom = 58.0
+offset_left = 14.0
+offset_top = 75.0
+offset_right = 62.0
+offset_bottom = 123.0
 texture = ExtResource("10_1evx5")
 stretch_mode = 1
 
@@ -210,31 +212,32 @@ color = Color(0, 0.011764706, 0, 0.28235295)
 
 [node name="btnLeft" type="Button" parent="GameUI/BottomBar" unique_id=755149458]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 10.0
-offset_right = 134.0
-offset_bottom = 99.0
+offset_left = 46.0
+offset_top = -6.0
+offset_right = 148.0
+offset_bottom = 106.0
 focus_mode = 0
-icon = ExtResource("11_ymn0g")
+icon = ExtResource("11_ea4w6")
 flat = true
 
 [node name="btnUp" type="Button" parent="GameUI/BottomBar" unique_id=1894149077]
 layout_mode = 0
-offset_left = 134.0
-offset_right = 237.0
-offset_bottom = 89.0
+offset_left = 148.0
+offset_top = 8.0
+offset_right = 254.0
+offset_bottom = 97.0
 focus_mode = 0
-icon = ExtResource("12_a87ul")
+icon = ExtResource("12_qviey")
 flat = true
 
 [node name="btnRight" type="Button" parent="GameUI/BottomBar" unique_id=605126403]
 layout_mode = 0
-offset_left = 237.0
-offset_top = 10.0
-offset_right = 340.0
-offset_bottom = 99.0
+offset_left = 295.0
+offset_top = -4.0
+offset_right = 382.0
+offset_bottom = 108.0
 focus_mode = 0
-icon = ExtResource("13_fqnwt")
+icon = ExtResource("13_trndx")
 flat = true
 
 [node name="btnShoot" type="Button" parent="GameUI/BottomBar" unique_id=235653240]
@@ -244,19 +247,20 @@ offset_top = 10.0
 offset_right = 1100.0
 offset_bottom = 99.0
 focus_mode = 0
-icon = ExtResource("14_vex4h")
+icon = ExtResource("14_gndta")
 flat = true
 expand_icon = true
 
 [node name="btnShootBomb" type="Button" parent="GameUI/BottomBar" unique_id=1915426345]
+visible = false
 modulate = Color(1, 0, 0, 1)
 layout_mode = 0
-offset_left = 1126.0
+offset_left = 1079.0
 offset_top = 7.0
-offset_right = 1229.0
+offset_right = 1182.0
 offset_bottom = 96.0
 focus_mode = 0
-icon = ExtResource("14_vex4h")
+icon = ExtResource("15_xb8yn")
 flat = true
 expand_icon = true
 

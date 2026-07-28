@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://snw2djd22pr3"]
-
-[ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://_Scenes/Levels/game_levels/base_level.tscn" id="1_qehtj"]
-
-[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_qehtj")]
-
-[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="2" unique_id=1103718868]
-text = "Level 3"

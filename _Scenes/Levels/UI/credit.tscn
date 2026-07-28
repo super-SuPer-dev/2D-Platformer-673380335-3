@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bajrtxxftc6wt"]
 
 [ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://_Scenes/Prefabs/theme.tres" id="1_2g1tp"]
+[ext_resource type="Texture2D" uid="uid://cjs3imxjojaay" path="res://_Assets/Textures/Screenshot 2026-07-28 192403.png" id="1_8g7qo"]
 [ext_resource type="Texture2D" uid="uid://1ay25i0wdihg" path="res://_Assets/Icons/cpkku_dark.png" id="2_fnvqj"]
 [ext_resource type="PackedScene" uid="uid://puc4l62gx6et" path="res://_Scenes/Prefabs/Uis/button_exit.tscn" id="3_fnvqj"]
 [ext_resource type="FontFile" uid="uid://dotjapgh3ccvq" path="res://_Assets/Fonts/VT323/VT323-Regular.ttf" id="4_0lh7m"]
@@ -14,6 +15,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Screenshot20260728192403" type="Sprite2D" parent="." unique_id=1855879516]
+position = Vector2(663, 372)
+scale = Vector2(2.1278408, 1.9474732)
+texture = ExtResource("1_8g7qo")
+
 [node name="btnExit" parent="." unique_id=1633606001 instance=ExtResource("3_fnvqj")]
 layout_mode = 1
 anchors_preset = 7
@@ -21,10 +27,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 475.0
-offset_top = -84.0
-offset_right = 601.0
-offset_bottom = -30.0
+offset_left = 393.0
+offset_top = -134.0
+offset_right = 519.0
+offset_bottom = -80.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -35,10 +41,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -594.0
-offset_top = -326.0
-offset_right = 127.0
-offset_bottom = 26.0
+offset_left = -585.0
+offset_top = -304.0
+offset_right = 136.0
+offset_bottom = 48.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
@@ -96,10 +102,13 @@ vertical_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=644912166]
 layout_mode = 0
-offset_left = 65.0
-offset_top = 471.0
-offset_right = 362.0
-offset_bottom = 576.0
+offset_left = 56.0
+offset_top = 456.0
+offset_right = 353.0
+offset_bottom = 561.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("4_0lh7m")
 theme_override_font_sizes/normal_font_size = 31
 text = "Music by Eric Matyas
@@ -107,10 +116,13 @@ www.soundimage.org"
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=1563924456]
 layout_mode = 0
-offset_left = 434.0
-offset_top = 469.0
-offset_right = 1164.0
-offset_bottom = 574.0
+offset_left = 425.0
+offset_top = 454.0
+offset_right = 1155.0
+offset_bottom = 559.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("4_0lh7m")
 theme_override_font_sizes/normal_font_size = 31
 text = "Player Sprite by DoodleDwarf
@@ -118,10 +130,13 @@ https://doodledwarf.itch.io/spine-animation-customassets"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1345915947]
 layout_mode = 0
-offset_left = 61.0
-offset_top = 579.0
-offset_right = 715.0
-offset_bottom = 675.0
+offset_left = 52.0
+offset_top = 564.0
+offset_right = 706.0
+offset_bottom = 660.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("4_0lh7m")
 theme_override_font_sizes/normal_font_size = 31
 text = "Graphics created by Penzilla Design

@@ -3,24 +3,29 @@
 [ext_resource type="Script" uid="uid://xf7fic0fligs" path="res://_Scripts/game_over.gd" id="1_rohwx"]
 [ext_resource type="PackedScene" uid="uid://puc4l62gx6et" path="res://_Scenes/Prefabs/Uis/button_exit.tscn" id="2_buq0o"]
 [ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://_Scenes/Prefabs/theme.tres" id="2_chlux"]
+[ext_resource type="Texture2D" uid="uid://b5h7eiwj15cc7" path="res://_Assets/Textures/Screenshot 2026-07-28 192826.png" id="2_ohwvy"]
 [ext_resource type="Script" uid="uid://8b03w07rch8g" path="res://_Scripts/button_play.gd" id="3_5lehs"]
 [ext_resource type="FontFile" uid="uid://dotjapgh3ccvq" path="res://_Assets/Fonts/VT323/VT323-Regular.ttf" id="3_cfvhd"]
 
 [node name="GameOver" type="Node2D" unique_id=826370530]
 script = ExtResource("1_rohwx")
 
+[node name="Screenshot20260728192826" type="Sprite2D" parent="." unique_id=1854519608]
+position = Vector2(656.00006, 351.00003)
+scale = Vector2(4.134127, 4.304913)
+texture = ExtResource("2_ohwvy")
+
 [node name="Title" type="Label" parent="." unique_id=1965507633]
-texture_filter = 1
-offset_left = 168.0
-offset_top = 80.0
-offset_right = 482.0
-offset_bottom = 182.0
+offset_left = 505.00003
+offset_top = 213.0
+offset_right = 581.00366
+offset_bottom = 232.0
 scale = Vector2(2.9867005, 2.9867005)
 theme = ExtResource("2_chlux")
 theme_override_colors/font_color = Color(0.88235295, 0.18039216, 0.1882353, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 74
+theme_override_font_sizes/font_size = 18
 text = "Game Over"
 horizontal_alignment = 1
 vertical_alignment = 1

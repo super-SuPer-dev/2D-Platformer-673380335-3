@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://ba2umthd5ts2v" path="res://_Scripts/player.gd" id="1_mqoqv"]
 [ext_resource type="PackedScene" uid="uid://c5y568p25r7rl" path="res://_Scenes/Prefabs/bullets/bullet_normal.tscn" id="2_4fuvf"]
-[ext_resource type="Texture2D" uid="uid://dxp77wq60c2rr" path="res://_Assets/Textures/etc/CloudTexture.png" id="3_6q7nd"]
 [ext_resource type="PackedScene" uid="uid://8150yq7r1ap7" path="res://_Scenes/Prefabs/bullets/bullet_explosion.tscn" id="3_4252j"]
 [ext_resource type="Texture2D" uid="uid://dia1dp34sme5l" path="res://_Assets/Spritesheet/light_w.png" id="4_wn7ci"]
 [ext_resource type="PackedScene" uid="uid://gtanpl0pwj3i" path="res://_Scenes/Sprites/player_body.tscn" id="6_sfcrp"]
@@ -31,19 +30,17 @@ double_jump = true
 
 [node name="ParticleTrails" type="CPUParticles2D" parent="." unique_id=1927645372]
 position = Vector2(2.08165e-12, -6)
-emitting = false
 amount = 20
-texture = ExtResource("3_6q7nd")
 lifetime = 0.4
 speed_scale = 0.8
-emission_shape = 1
-emission_sphere_radius = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(1, 1)
 direction = Vector2(0, 0)
 gravity = Vector2(0, 0)
 damping_min = 1.0
 damping_max = 1.0
-scale_amount_min = 0.2
-scale_amount_max = 0.6
+scale_amount_min = 10.0
+scale_amount_max = 40.0
 scale_amount_curve = SubResource("Curve_m2jh0")
 color_ramp = SubResource("Gradient_3gc37")
 

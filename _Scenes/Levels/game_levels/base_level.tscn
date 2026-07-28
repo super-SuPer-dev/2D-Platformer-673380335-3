@@ -13,20 +13,6 @@ script = ExtResource("1_iemmg")
 z_index = 1
 position = Vector2(1619, 397)
 
-[node name="Level" type="Node2D" parent="." unique_id=1752500785]
-
-[node name="Background1" type="Parallax2D" parent="Level" unique_id=1072429833]
-z_index = -10
-scroll_scale = Vector2(0.1, 0.1)
-repeat_size = Vector2(1152, 0)
-repeat_times = 2
-
-[node name="Background2" type="Parallax2D" parent="Level" unique_id=1070008654]
-z_index = -10
-scroll_scale = Vector2(0.5, 0.5)
-repeat_size = Vector2(1152, 0)
-repeat_times = 2
-
 [node name="Player" parent="." unique_id=850213228 instance=ExtResource("4_hr04v")]
 unique_name_in_owner = true
 z_index = 1

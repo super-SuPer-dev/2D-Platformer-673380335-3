@@ -10,7 +10,10 @@ bounce = 0.8
 [sub_resource type="CircleShape2D" id="CircleShape2D_mqoqv"]
 radius = 6.708204
 
-[node name="Bullet_Explosion" type="RigidBody2D" unique_id=737966296 groups=["Bullet"]]
+[sub_resource type="CircleShape2D" id="CircleShape2D_dwjmf"]
+radius = 95.02105
+
+[node name="Bullet_Explosion" type="RigidBody2D" unique_id=737966296]
 collision_layer = 2
 collision_mask = 5
 physics_material_override = SubResource("PhysicsMaterial_pkqe3")
@@ -25,3 +28,36 @@ modulate = Color(1, 0, 0, 1)
 position = Vector2(-0.1641778, -0.3124994)
 scale = Vector2(0.24490353, 0.2572188)
 texture = ExtResource("2_77yp8")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1189425132 groups=["Bullet"]]
+scale = Vector2(3.6272597, 3.6272597)
+collision_mask = 5
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=6060995]
+shape = SubResource("CircleShape2D_dwjmf")
+
+[node name="Polygon2D" type="Polygon2D" parent="Area2D" unique_id=627067664]
+position = Vector2(71.95515, 23.709358)
+scale = Vector2(0.714017, -0.871776)
+color = Color(1, 0, 0, 0.5686275)
+polygon = PackedVector2Array(-193.5, -22, -90.5, -74, 13.5, 35, -54.5, 114, -147.5, 111, -220.5, 74)
+uv = PackedVector2Array(-193.5, -22, -90.5, -74, 13.5, 35, -54.5, 114, -147.5, 111, -220.5, 74)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Area2D" unique_id=1972690850]
+position = Vector2(68.09549, 54.035286)
+rotation = 0.5407655
+scale = Vector2(0.714017, -0.871776)
+color = Color(1, 0.53333336, 0, 0.5686275)
+polygon = PackedVector2Array(-193.5, -22, -90.5, -74, 13.5, 35, -54.5, 114, -147.5, 111, -220.5, 74)
+uv = PackedVector2Array(-193.5, -22, -90.5, -74, 13.5, 35, -54.5, 114, -147.5, 111, -220.5, 74)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Area2D" unique_id=271342560]
+position = Vector2(33.08283, 71.128075)
+rotation = 0.5407655
+scale = Vector2(0.714017, -0.871776)
+color = Color(1, 0.7666667, 0, 0.5686275)
+polygon = PackedVector2Array(-193.5, -22, -90.5, -74, 13.5, 35, -54.5, 114, -147.5, 111, -220.5, 74)
+uv = PackedVector2Array(-193.5, -22, -90.5, -74, 13.5, 35, -54.5, 114, -147.5, 111, -220.5, 74)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

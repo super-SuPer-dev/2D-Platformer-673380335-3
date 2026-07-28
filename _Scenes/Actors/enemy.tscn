@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://d27bcsmx82vfa"]
 
 [ext_resource type="Script" uid="uid://cqthh7s5qpuw3" path="res://_Scripts/enemy.gd" id="1_7cwx2"]
-[ext_resource type="AudioStream" uid="uid://wg4mya74ni6n" path="res://_Assets/Sound/FX/explosion.wav" id="2_5n1qu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_21vrd"]
 radius = 17.0
@@ -81,10 +80,5 @@ target_position = Vector2(-28, 0)
 [node name="floorRay" type="RayCast2D" parent="Sprite/Ray" unique_id=1219665679]
 position = Vector2(-24, -16)
 target_position = Vector2(0, 23)
-
-[node name="DeathSfx" type="AudioStreamPlayer" parent="." unique_id=1907249660]
-stream = ExtResource("2_5n1qu")
-volume_db = -3.0
-bus = &"sfx"
 
 [connection signal="body_entered" from="HitArea" to="." method="_on_hit_area_body_entered"]

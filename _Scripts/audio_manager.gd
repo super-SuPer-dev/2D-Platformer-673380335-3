@@ -17,5 +17,5 @@ extends Node
 
 @onready var potion_drink_sfx = $PotionDrinkSfx
 
-@onready var coin_sfx = $Points/CoinSfx
-@onready var gem_sfx = $Points/GemSfx
+@onready var coin_sfx = $CoinSfx
+@onready var gem_sfx = $GemSfx

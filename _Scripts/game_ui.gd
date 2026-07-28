@@ -6,8 +6,12 @@ extends CanvasLayer
 
 func _ready() -> void:
 	GameManager.player_data_changed.connect(update_life_ui)
+	GameManager.weapon_updated.connect(update_weapon_ui)
 	$CLI/Panel/ScrollContainer/VBoxContainer/God.text = "God Mode {v}.".format({"v": GameManager.god})
 	update_life_ui()
+	
+func update_weapon_ui():
+	$GameUI/BottomBar/btnShootBomb.visible = true
 	
 func update_life_ui():
 	$GameUI/TopBar/LifeRect.size.x = 48 * GameManager.life
