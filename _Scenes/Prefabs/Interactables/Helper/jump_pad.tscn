@@ -8,6 +8,13 @@ size = Vector2(98, 20)
 [node name="JumpPad" type="Node2D" unique_id=1949625588]
 script = ExtResource("1_fv4uj")
 
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1491472207]
+position = Vector2(22.000002, -5)
+scale = Vector2(0.2416431, 0.26398158)
+color = Color(7.219613e-08, 0.49159658, 0.17999426, 1)
+polygon = PackedVector2Array(-264, -16, 90, -15, 90, 52, -269, 47)
+uv = PackedVector2Array(-264, -16, 90, -15, 90, 52, -269, 47)
+
 [node name="Area2D" type="Area2D" parent="." unique_id=1145761966]
 collision_mask = 3
 

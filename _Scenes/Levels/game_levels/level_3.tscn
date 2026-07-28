@@ -17,10 +17,12 @@
 [ext_resource type="PackedScene" uid="uid://dabag2r57aued" path="res://_Scenes/Prefabs/Interactables/Helper/Item/heal_potion.tscn" id="9_8lred"]
 [ext_resource type="PackedScene" uid="uid://bp4l1nlnh8oq1" path="res://_Scenes/Prefabs/Interactables/Traps/trap_2.tscn" id="11_fqdub"]
 [ext_resource type="PackedScene" uid="uid://rg0efoa2qhth" path="res://_Scenes/Prefabs/Interactables/Helper/Item/life_potion.tscn" id="12_mdtri"]
+[ext_resource type="PackedScene" uid="uid://sumdg6ug0j5q" path="res://_Scenes/Prefabs/Interactables/Helper/portal.tscn" id="13_ap4hm"]
 [ext_resource type="PackedScene" uid="uid://dm5q6ssll8jo7" path="res://_Scenes/Prefabs/Interactables/Helper/Item/speed_potion.tscn" id="13_hbtbb"]
 [ext_resource type="PackedScene" uid="uid://dqocdd23rrnsn" path="res://_Scenes/Prefabs/Collectables/Point/coin.tscn" id="14_4lett"]
 [ext_resource type="AudioStream" uid="uid://cvwled7ynlj5j" path="res://_Assets/Sound/bgm.ogg" id="15_4lett"]
 [ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://_Scenes/Prefabs/Collectables/Point/gem.tscn" id="21_ap4hm"]
+[ext_resource type="PackedScene" uid="uid://bwk1x0qiht02k" path="res://_Scenes/Prefabs/Interactables/Helper/moving_platform.tscn" id="23_5ero1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_x6yti"]
 
@@ -146,8 +148,15 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("6_hbtbb")
 theme_override_font_sizes/font_size = 60
-text = "Level x"
+text = "Level 3"
 metadata/_edit_lock_ = true
+
+[node name="Portal" parent="." unique_id=1141761058 node_paths=PackedStringArray("exit_portal") instance=ExtResource("13_ap4hm")]
+position = Vector2(2216, -896)
+exit_portal = NodePath("../Portal2")
+
+[node name="Portal2" parent="." unique_id=1544260995 instance=ExtResource("13_ap4hm")]
+position = Vector2(2696, -896)
 
 [node name="Text" type="Node2D" parent="." unique_id=416249055]
 
@@ -334,6 +343,21 @@ position = Vector2(2888, -848)
 [node name="gem5" parent="." unique_id=294852075 instance=ExtResource("21_ap4hm")]
 position = Vector2(2752, -848)
 
+[node name="MovingPlatform" parent="." unique_id=257232278 instance=ExtResource("23_5ero1")]
+position = Vector2(2440, -248)
+scale = Vector2(4.268761, 4.0403523)
+
+[node name="MarkerA" parent="MovingPlatform" index="2" unique_id=74088346]
+position = Vector2(-71.21504, -45.540585)
+
+[node name="MarkerB" parent="MovingPlatform" index="3" unique_id=1663037517]
+position = Vector2(112.44479, 7.9201016)
+
+[node name="Polygon2D" parent="MovingPlatform" index="4" unique_id=1375079267]
+color = Color(0, 0, 0, 1)
+
 [connection signal="hit_enemy" from="Player" to="." method="_on_player_hit_enemy"]
 [connection signal="hit_trap" from="Player" to="." method="_on_player_hit_trap"]
 [connection signal="body_entered" from="KillZone" to="." method="_on_area_2d_body_entered"]
+
+[editable path="MovingPlatform"]

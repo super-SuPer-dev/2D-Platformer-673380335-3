@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cb8e62red7kc0" path="res://_Scenes/Prefabs/Interactables/Traps/trap_1.tscn" id="7_2x1t5"]
 [ext_resource type="PackedScene" uid="uid://dqocdd23rrnsn" path="res://_Scenes/Prefabs/Collectables/Point/coin.tscn" id="8_x6yti"]
 [ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://_Scenes/Prefabs/Collectables/Point/gem.tscn" id="9_1vvgg"]
+[ext_resource type="PackedScene" uid="uid://3hs7ylluioxv" path="res://_Scenes/Prefabs/Interactables/Helper/jump_pad.tscn" id="15_goc8t"]
 [ext_resource type="AudioStream" uid="uid://cvwled7ynlj5j" path="res://_Assets/Sound/bgm.ogg" id="16_wpgi2"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_x6yti"]
@@ -165,8 +166,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("5_f50sj")
 theme_override_font_sizes/font_size = 60
-text = "Level x"
+text = "Level 1"
 metadata/_edit_lock_ = true
+
+[node name="JumpPad" parent="." unique_id=1949625588 instance=ExtResource("15_goc8t")]
+position = Vector2(2036, 810)
 
 [node name="Text" type="Node2D" parent="." unique_id=416249055]
 

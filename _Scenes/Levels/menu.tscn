@@ -61,7 +61,6 @@ theme_override_constants/separation = 10
 metadata/_edit_group_ = true
 
 [node name="btnTest" type="Button" parent="Node2D/VBoxContainer" unique_id=245304790]
-visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ju4x4")
 theme_override_font_sizes/font_size = 68

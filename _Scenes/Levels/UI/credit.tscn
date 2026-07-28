@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://_Scenes/Prefabs/theme.tres" id="1_2g1tp"]
 [ext_resource type="Texture2D" uid="uid://cjs3imxjojaay" path="res://_Assets/Textures/Screenshot 2026-07-28 192403.png" id="1_8g7qo"]
-[ext_resource type="Texture2D" uid="uid://1ay25i0wdihg" path="res://_Assets/Icons/cpkku_dark.png" id="2_fnvqj"]
+[ext_resource type="Texture2D" uid="uid://crb8ffgxxpfeu" path="res://_Assets/Spritesheet/logo_kku_cp.png" id="3_8g7qo"]
 [ext_resource type="PackedScene" uid="uid://puc4l62gx6et" path="res://_Scenes/Prefabs/Uis/button_exit.tscn" id="3_fnvqj"]
 [ext_resource type="FontFile" uid="uid://dotjapgh3ccvq" path="res://_Assets/Fonts/VT323/VT323-Regular.ttf" id="4_0lh7m"]
 [ext_resource type="FontFile" uid="uid://dy7456hvp44co" path="res://_Assets/Fonts/K2D/K2D-Regular.ttf" id="5_qu31k"]
@@ -53,8 +53,9 @@ metadata/_edit_group_ = true
 [node name="CpkkuDark2" type="TextureRect" parent="VBoxContainer2" unique_id=782946796]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-texture = ExtResource("2_fnvqj")
-stretch_mode = 5
+texture = ExtResource("3_8g7qo")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="Title" type="Label" parent="VBoxContainer2" unique_id=1640205557]
 layout_mode = 2

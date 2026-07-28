@@ -1,4 +1,6 @@
-# 2D Platformer Starter Kit
+# 2D Platformer Starter Kit version 673380335-3
+
+## นายพุฒิพงศ์ พานิชันธุ์ รหัส 673380335-3
 
 This starter kit provides all the essential mechanics needed to build a complete 2D platformer game in Godot 4.7. It is designed as a hands-on learning resource for students taking the **Computer Game Development** course at the **College of Computing, Khon Kaen University**.
 
@@ -6,7 +8,14 @@ This starter kit provides all the essential mechanics needed to build a complete
 
 <img src="docs/qrcode.png" style="width:300px;" />
 
-- [Game Preview](https://computingkku.github.io/2D-Platformer-Starter-Kit/)
+- [Game Preview](https://super-super-dev.github.io/lab04_prod/)
+- [Video Preview](https://youtu.be/Fny8-rW9FSw)
+
+<img src="docs/demo1.png" width="300">
+<img src="docs/demo2.png" width="300">
+<img src="docs/demo3.png" width="300">
+<img src="docs/demo4.png" width="300">
+<img src="docs/demo5.png" width="300">
 
 
 ## Features

@@ -20,4 +20,9 @@ shape = SubResource("RectangleShape2D_dwjmf")
 position = Vector2(40, 0)
 gizmo_extents = 30.0
 
+[node name="Polygon2D" type="Polygon2D" parent="Marker2D" unique_id=955765850]
+color = Color(0.2259146, 0.52184445, 0.95830625, 1)
+polygon = PackedVector2Array(-32, -72, -32, 72, -48, 72, -48, -72)
+uv = PackedVector2Array(-78.8674, -60.55359, -77.21451, -21.710617, -96.22275, -20.88417, -100.35498, -59.727142)
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
