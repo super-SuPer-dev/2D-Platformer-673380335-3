@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://b6tvaxw54wsq0"]
+
+[ext_resource type="Script" uid="uid://tkynu7pd01lh" path="res://_Scripts/menu.gd" id="1_hq2ph"]
+[ext_resource type="FontFile" uid="uid://dotjapgh3ccvq" path="res://_Assets/Fonts/VT323/VT323-Regular.ttf" id="2_ju4x4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwjmf"]
+
+[node name="Node2D" type="Control" unique_id=641200817]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hq2ph")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=830846373]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6659688, 0.3024106, 0.2945988, 1)
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Node2D" type="Control" parent="." unique_id=609696431]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Node2D" unique_id=1772259164]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -11.02
+offset_right = 272.0
+offset_bottom = 323.98
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.64562875, 0.64562875)
+theme_override_constants/separation = 10
+metadata/_edit_group_ = true
+
+[node name="btnTest" type="Button" parent="Node2D/VBoxContainer" unique_id=245304790]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ju4x4")
+theme_override_font_sizes/font_size = 68
+text = "Testing Area"
+
+[node name="btnStart" type="Button" parent="Node2D/VBoxContainer" unique_id=843125025]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_fonts/font = ExtResource("2_ju4x4")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_dwjmf")
+text = "Start"
+
+[node name="btnContinue" type="Button" parent="Node2D/VBoxContainer" unique_id=922351197]
+layout_mode = 2
+theme_override_colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_fonts/font = ExtResource("2_ju4x4")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_dwjmf")
+disabled = true
+text = "Continue"
+
+[node name="btnOption" type="Button" parent="Node2D/VBoxContainer" unique_id=606273451]
+layout_mode = 2
+theme_override_colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_fonts/font = ExtResource("2_ju4x4")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_dwjmf")
+text = "Option"
+
+[node name="btnCredit" type="Button" parent="Node2D/VBoxContainer" unique_id=378335107]
+layout_mode = 2
+theme_override_colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_fonts/font = ExtResource("2_ju4x4")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_dwjmf")
+text = "Credit"
+
+[node name="btnExit" type="Button" parent="Node2D/VBoxContainer" unique_id=996798074]
+layout_mode = 2
+theme_override_colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_fonts/font = ExtResource("2_ju4x4")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_dwjmf")
+text = "Exit
+"
+
+[node name="Title" type="Label" parent="Node2D" unique_id=1880536959]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = -164.975
+offset_right = 477.0
+offset_bottom = 55.024994
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.64562875, 0.64562875)
+theme_override_colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_fonts/font = ExtResource("2_ju4x4")
+theme_override_font_sizes/font_size = 219
+text = "The Game"
+
+[connection signal="pressed" from="Node2D/VBoxContainer/btnTest" to="." method="_on_btn_test_pressed"]
+[connection signal="pressed" from="Node2D/VBoxContainer/btnStart" to="." method="_on_btn_start_pressed"]
+[connection signal="pressed" from="Node2D/VBoxContainer/btnContinue" to="." method="_on_btn_continue_pressed"]
+[connection signal="pressed" from="Node2D/VBoxContainer/btnOption" to="." method="_on_btn_option_pressed"]
+[connection signal="pressed" from="Node2D/VBoxContainer/btnCredit" to="." method="_on_btn_credit_pressed"]
+[connection signal="pressed" from="Node2D/VBoxContainer/btnExit" to="." method="_on_btn_exit_pressed"]

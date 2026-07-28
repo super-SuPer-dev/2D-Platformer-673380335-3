@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://dqocdd23rrnsn"]
+
+[ext_resource type="Script" uid="uid://cucxl5dsdevya" path="res://_Scripts/base_point.gd" id="1_hkmvb"]
+[ext_resource type="Texture2D" uid="uid://621as0fwjhum" path="res://_Assets/Textures/etc/star_07.png" id="2_bdk7i"]
+[ext_resource type="Texture2D" uid="uid://b5nchs8xeg1xf" path="res://_Assets/Spritesheet/Coins/MonedaD.png" id="3_w8viw"]
+
+[sub_resource type="Curve" id="Curve_yh7uo"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.494709, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_kkhmu"]
+offsets = PackedFloat32Array(0.625, 1)
+colors = PackedColorArray(0.914063, 0.734375, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2eai"]
+atlas = ExtResource("3_w8viw")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fquia"]
+atlas = ExtResource("3_w8viw")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_duaiu"]
+atlas = ExtResource("3_w8viw")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpldh"]
+atlas = ExtResource("3_w8viw")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2w7m"]
+atlas = ExtResource("3_w8viw")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dwjmf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2eai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fquia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_duaiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bpldh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2w7m")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dwjmf"]
+radius = 15.0
+height = 36.0
+
+[node name="Coin" type="Area2D" unique_id=251510796]
+collision_mask = 3
+script = ExtResource("1_hkmvb")
+Score = 2
+
+[node name="CoinSparkles" type="CPUParticles2D" parent="." unique_id=1908445367]
+amount = 10
+texture = ExtResource("2_bdk7i")
+lifetime = 2.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 80.0
+damping_min = 0.5
+damping_max = 0.5
+scale_amount_min = 0.04
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_yh7uo")
+color_ramp = SubResource("Gradient_kkhmu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=280960794]
+texture_filter = 1
+scale = Vector2(2.125, 2.125)
+sprite_frames = SubResource("SpriteFrames_dwjmf")
+autoplay = "default"
+frame_progress = 0.89435035
+
+[node name="HitBox" type="CollisionShape2D" parent="." unique_id=1816510817]
+shape = SubResource("CapsuleShape2D_dwjmf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

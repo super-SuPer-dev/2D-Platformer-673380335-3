@@ -1,0 +1,269 @@
+[gd_scene format=4 uid="uid://dtd46ya2dt5gi"]
+
+[ext_resource type="Script" uid="uid://cwm5w1bxx3js3" path="res://_Scripts/base_level.gd" id="1_aqyn1"]
+[ext_resource type="PackedScene" uid="uid://cyti38f0lagf2" path="res://_Scenes/Prefabs/Interactables/level_finish_door.tscn" id="2_43sbf"]
+[ext_resource type="Texture2D" uid="uid://cscpg2omvy0cb" path="res://_Assets/Textures/1 - Grassland/Background parts/5 - Sky_color.png" id="2_q1g1o"]
+[ext_resource type="TileSet" uid="uid://delxbrjbceio5" path="res://_Assets/Textures/Grassland.tres" id="3_fqdub"]
+[ext_resource type="PackedScene" uid="uid://didoh0y6w5ks" path="res://_Scenes/Levels/game_levels/level_4.tscn" id="3_hbtbb"]
+[ext_resource type="Texture2D" uid="uid://1fjgf6dtee62" path="res://_Assets/Textures/1 - Grassland/Background parts/4 - Cloud_cover_2.png" id="3_rehyn"]
+[ext_resource type="Texture2D" uid="uid://uu1j3wwdqai3" path="res://_Assets/Textures/1 - Grassland/Background parts/3 - Cloud_cover_1.png" id="4_4lett"]
+[ext_resource type="PackedScene" uid="uid://w7m6tehvvy3g" path="res://_Scenes/Actors/player.tscn" id="4_b7t2g"]
+[ext_resource type="Texture2D" uid="uid://bjqv6yr03ligl" path="res://_Assets/Textures/1 - Grassland/Background parts/2 - Hills.png" id="5_ap4hm"]
+[ext_resource type="PackedScene" uid="uid://cdwabmqtlxr1y" path="res://_Scenes/Levels/UI/game_ui.tscn" id="5_mdtri"]
+[ext_resource type="Texture2D" uid="uid://ca2dy1eoumt1f" path="res://_Assets/Textures/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="6_5ero1"]
+[ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://_Scenes/Prefabs/theme.tres" id="6_hbtbb"]
+[ext_resource type="PackedScene" uid="uid://7oxbgu64i56r" path="res://_Scenes/Prefabs/Interactables/Helper/Item/jump_potion.tscn" id="7_43sbf"]
+[ext_resource type="AudioStream" uid="uid://b6qosmsqr2bg3" path="res://_Assets/Sound/Musics/The-Coin-Op-Conquistador.mp3" id="7_ll78k"]
+[ext_resource type="PackedScene" uid="uid://cqs760tu65ofn" path="res://_Scenes/Actors/monster_slim2.tscn" id="8_8na01"]
+[ext_resource type="PackedScene" uid="uid://dabag2r57aued" path="res://_Scenes/Prefabs/Interactables/Helper/Item/heal_potion.tscn" id="9_8lred"]
+[ext_resource type="PackedScene" uid="uid://bp4l1nlnh8oq1" path="res://_Scenes/Prefabs/Interactables/Traps/trap_2.tscn" id="11_fqdub"]
+[ext_resource type="PackedScene" uid="uid://rg0efoa2qhth" path="res://_Scenes/Prefabs/Interactables/Helper/Item/life_potion.tscn" id="12_mdtri"]
+[ext_resource type="PackedScene" uid="uid://dm5q6ssll8jo7" path="res://_Scenes/Prefabs/Interactables/Helper/Item/speed_potion.tscn" id="13_hbtbb"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_x6yti"]
+
+[node name="BaseLevel" type="Node2D" unique_id=1997201631]
+script = ExtResource("1_aqyn1")
+
+[node name="PARA" type="Node2D" parent="." unique_id=1859015538]
+position = Vector2(3073, -871)
+scale = Vector2(1.503324, 1.503324)
+
+[node name="Parallax2D" type="Parallax2D" parent="PARA" unique_id=1337030579]
+texture_filter = 1
+scroll_scale = Vector2(0, 1)
+scroll_offset = Vector2(-1352, 358)
+repeat_size = Vector2(1748.545, 0)
+repeat_times = 4
+
+[node name="5SkyColor" type="Sprite2D" parent="PARA/Parallax2D" unique_id=289945740]
+position = Vector2(715.52, -75.67999)
+scale = Vector2(6.08, 6.08)
+texture = ExtResource("2_q1g1o")
+
+[node name="Parallax2D2" type="Parallax2D" parent="PARA" unique_id=2071502633]
+texture_filter = 1
+scroll_scale = Vector2(0.1, 1)
+scroll_offset = Vector2(-1352, 358)
+repeat_size = Vector2(1751.035, 0)
+repeat_times = 4
+
+[node name="4CloudCover2" type="Sprite2D" parent="PARA/Parallax2D2" unique_id=1274376140]
+position = Vector2(715.52, -75.67999)
+scale = Vector2(6.08, 6.08)
+texture = ExtResource("3_rehyn")
+
+[node name="Parallax2D3" type="Parallax2D" parent="PARA" unique_id=1625496212]
+texture_filter = 1
+scroll_scale = Vector2(0.15, 1)
+scroll_offset = Vector2(-1352, 358)
+repeat_size = Vector2(1751.035, 0)
+repeat_times = 4
+
+[node name="3CloudCover1" type="Sprite2D" parent="PARA/Parallax2D3" unique_id=1072907514]
+position = Vector2(715.52, -75.67999)
+scale = Vector2(6.08, 6.08)
+texture = ExtResource("4_4lett")
+
+[node name="Parallax2D4" type="Parallax2D" parent="PARA" unique_id=1782413528]
+texture_filter = 1
+scroll_scale = Vector2(0.2, 1)
+scroll_offset = Vector2(-1352, 358)
+repeat_size = Vector2(1751.035, 0)
+repeat_times = 4
+
+[node name="2Hills" type="Sprite2D" parent="PARA/Parallax2D4" unique_id=2030792301]
+position = Vector2(715.52, -75.67999)
+scale = Vector2(6.08, 6.08)
+texture = ExtResource("5_ap4hm")
+
+[node name="Parallax2D5" type="Parallax2D" parent="PARA" unique_id=2144716178]
+texture_filter = 1
+scroll_scale = Vector2(0.3, 1)
+scroll_offset = Vector2(-1352, 358)
+repeat_size = Vector2(1748.545, 0)
+repeat_times = 4
+
+[node name="1ForegroundScenery" type="Sprite2D" parent="PARA/Parallax2D5" unique_id=657394989]
+position = Vector2(715.52, -75.67999)
+scale = Vector2(6.08, 6.08)
+texture = ExtResource("6_5ero1")
+
+[node name="LevelFinishDoor" parent="." unique_id=1788542095 instance=ExtResource("2_43sbf")]
+z_index = 1
+texture_filter = 1
+position = Vector2(3073, -871)
+scale = Vector2(1.503324, 1.503324)
+next_scene = ExtResource("3_hbtbb")
+
+[node name="Level" type="Node2D" parent="." unique_id=1752500785]
+
+[node name="Background1" type="Parallax2D" parent="Level" unique_id=1072429833]
+z_index = -10
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(1152, 0)
+repeat_times = 2
+
+[node name="Background2" type="Parallax2D" parent="Level" unique_id=1070008654]
+z_index = -10
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(1152, 0)
+repeat_times = 2
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="Level" unique_id=1417736159]
+texture_filter = 1
+position = Vector2(2886, -1898)
+scale = Vector2(3.7993205, 3.7993205)
+tile_map_data = PackedByteArray("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")
+tile_set = ExtResource("3_fqdub")
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." unique_id=850213228 instance=ExtResource("4_b7t2g")]
+unique_name_in_owner = true
+z_index = 1
+position = Vector2(-433.00006, 398)
+
+[node name="Coins" type="Node2D" parent="." unique_id=1530662565]
+z_index = 2
+
+[node name="Enemies" type="Node2D" parent="." unique_id=1580630701]
+
+[node name="UserInterface" parent="." unique_id=1799764374 instance=ExtResource("5_mdtri")]
+
+[node name="Label" type="Label" parent="UserInterface" unique_id=1103718868]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.0
+offset_top = -11.5
+offset_right = 27.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_hbtbb")
+theme_override_font_sizes/font_size = 60
+text = "Level x"
+metadata/_edit_lock_ = true
+
+[node name="Text" type="Node2D" parent="." unique_id=416249055]
+
+[node name="Panel2" type="Panel" parent="Text" unique_id=1287594246]
+offset_left = -869.0
+offset_top = 292.0
+offset_right = -539.0
+offset_bottom = 327.0
+
+[node name="Panel3" type="Panel" parent="Text" unique_id=188289783]
+offset_left = 377.0
+offset_top = -705.0
+offset_right = 707.0
+offset_bottom = -670.0
+
+[node name="Panel4" type="Panel" parent="Text" unique_id=1336466265]
+offset_left = 3369.0
+offset_top = -277.0
+offset_right = 3699.0
+offset_bottom = -242.0
+
+[node name="Panel5" type="Panel" parent="Text" unique_id=1713284465]
+offset_left = 2991.0
+offset_top = -1007.0
+offset_right = 3149.0
+offset_bottom = -972.0
+
+[node name="Label8" type="Label" parent="Text" unique_id=2066475428]
+offset_left = 388.0
+offset_top = -701.0
+offset_right = 588.0
+offset_bottom = -670.0
+text = "Green potion will give you \"jump boost\""
+
+[node name="Label10" type="Label" parent="Text" unique_id=1801589512]
+offset_left = -855.0
+offset_top = 296.0
+offset_right = -548.0
+offset_bottom = 327.0
+text = "blue potion will give you \"Speed boost\""
+
+[node name="Label9" type="Label" parent="Text" unique_id=378405819]
+offset_left = 3406.0
+offset_top = -272.0
+offset_right = 3665.0
+offset_bottom = -245.0
+text = "Yellow potion will give you a life"
+
+[node name="Label4" type="Label" parent="Text" unique_id=891343671]
+offset_left = 3009.0
+offset_top = -1001.0
+offset_right = 3140.0
+offset_bottom = -971.0
+text = "Enter the door."
+
+[node name="JumpPotion" parent="Text" unique_id=242563240 instance=ExtResource("7_43sbf")]
+position = Vector2(414, -607)
+
+[node name="JumpPotion2" parent="Text" unique_id=1705729849 instance=ExtResource("7_43sbf")]
+position = Vector2(494, -607)
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1580159016]
+stream = ExtResource("7_ll78k")
+volume_db = -5.0
+autoplay = true
+bus = &"music"
+parameters/looping = true
+
+[node name="KillZone" type="Area2D" parent="." unique_id=898712258]
+position = Vector2(47, 952)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=894546188]
+position = Vector2(1093, 745)
+shape = SubResource("WorldBoundaryShape2D_x6yti")
+
+[node name="Enemy" parent="." unique_id=600502477 instance=ExtResource("8_8na01")]
+position = Vector2(1637, 276)
+
+[node name="Enemy2" parent="." unique_id=900594823 instance=ExtResource("8_8na01")]
+position = Vector2(1196, 262)
+
+[node name="Enemy3" parent="." unique_id=1705861765 instance=ExtResource("8_8na01")]
+position = Vector2(675, -587)
+
+[node name="Enemy4" parent="." unique_id=805149967 instance=ExtResource("8_8na01")]
+position = Vector2(2288, -825)
+
+[node name="Enemy5" parent="." unique_id=845769428 instance=ExtResource("8_8na01")]
+position = Vector2(2948, -128)
+
+[node name="Enemy6" parent="." unique_id=218317910 instance=ExtResource("8_8na01")]
+position = Vector2(3601, -162)
+
+[node name="Enemy7" parent="." unique_id=786904042 instance=ExtResource("8_8na01")]
+position = Vector2(3307, -156)
+
+[node name="Enemy8" parent="." unique_id=1160480750 instance=ExtResource("8_8na01")]
+position = Vector2(1806, -242)
+
+[node name="Enemy9" parent="." unique_id=808295527 instance=ExtResource("8_8na01")]
+position = Vector2(157, 431)
+
+[node name="HealPotion" parent="." unique_id=744701122 instance=ExtResource("9_8lred")]
+position = Vector2(2430, -65)
+
+[node name="Trap2" parent="." unique_id=1894763376 instance=ExtResource("11_fqdub")]
+position = Vector2(1743, -985)
+
+[node name="Trap3" parent="." unique_id=2119846583 instance=ExtResource("11_fqdub")]
+position = Vector2(2081, -323)
+
+[node name="LifePotion" parent="." unique_id=1467514359 instance=ExtResource("12_mdtri")]
+position = Vector2(3720, -178)
+
+[node name="LifePotion2" parent="." unique_id=545155813 instance=ExtResource("13_hbtbb")]
+position = Vector2(-683, 372)
+
+[connection signal="hit_enemy" from="Player" to="." method="_on_player_hit_enemy"]
+[connection signal="hit_trap" from="Player" to="." method="_on_player_hit_trap"]
+[connection signal="body_entered" from="KillZone" to="." method="_on_area_2d_body_entered"]

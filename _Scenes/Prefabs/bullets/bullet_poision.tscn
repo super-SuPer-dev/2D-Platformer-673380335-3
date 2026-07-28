@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dolic7takxccm"]
+
+[ext_resource type="Script" uid="uid://wbsj0beggb7q" path="res://_Scripts/bullet_poision.gd" id="1_p4bsg"]
+[ext_resource type="Texture2D" uid="uid://dsqhpet4dfpn8" path="res://_Assets/Spritesheet/bullet.png" id="2_r6nrp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dwjmf"]
+radius = 6.71
+
+[node name="Bullet_Poision" type="RigidBody2D" unique_id=1741952895]
+script = ExtResource("1_p4bsg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=662667484]
+shape = SubResource("CircleShape2D_dwjmf")
+
+[node name="Bullet" type="Sprite2D" parent="." unique_id=531462700]
+position = Vector2(-0.1641778, -0.3124994)
+scale = Vector2(0.24490353, 0.2572188)
+texture = ExtResource("2_r6nrp")

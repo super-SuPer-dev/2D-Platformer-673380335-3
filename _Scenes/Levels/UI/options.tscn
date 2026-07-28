@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://cuq7vusmo7y5g"]
+
+[ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://_Scenes/Prefabs/theme.tres" id="2_wto1r"]
+[ext_resource type="Script" uid="uid://epbyy3rluw1" path="res://_Scripts/sfx.gd" id="3_2cf2s"]
+[ext_resource type="Script" uid="uid://bkdx2b31oiwo1" path="res://_Scenes/Levels/UI/button.gd" id="4_4s1sb"]
+[ext_resource type="Script" uid="uid://4286tlewqvvi" path="res://_Scripts/music.gd" id="4_diiku"]
+
+[node name="Node2D" type="Control" unique_id=629298687]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="." unique_id=714304452]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.5
+offset_top = 31.595
+offset_right = 150.5
+offset_bottom = 63.595
+grow_horizontal = 2
+theme = ExtResource("2_wto1r")
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 24
+text = "Game Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFX" type="Button" parent="." unique_id=1757350007]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 159.0
+offset_right = 429.0
+offset_bottom = 221.0
+text = "SFX
+"
+script = ExtResource("3_2cf2s")
+
+[node name="MUSIC" type="Button" parent="." unique_id=395141462]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 230.0
+offset_right = 427.0
+offset_bottom = 305.0
+text = "Music
+"
+script = ExtResource("4_diiku")
+
+[node name="Button" type="Button" parent="." unique_id=550010226]
+layout_mode = 0
+offset_left = 617.0
+offset_top = 156.0
+offset_right = 662.0
+offset_bottom = 187.0
+text = "Back
+"
+script = ExtResource("4_4s1sb")
+
+[connection signal="pressed" from="SFX" to="SFX" method="_on_pressed"]
+[connection signal="pressed" from="MUSIC" to="MUSIC" method="_on_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

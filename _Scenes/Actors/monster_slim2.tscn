@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://cqs760tu65ofn"]
+
+[ext_resource type="PackedScene" uid="uid://d27bcsmx82vfa" path="res://_Scenes/Actors/enemy.tscn" id="1_tcsi5"]
+[ext_resource type="Script" uid="uid://bx5lotsye1r4s" path="res://_Scripts/monster_small.gd" id="2_cxq4d"]
+[ext_resource type="Texture2D" uid="uid://batdbg731ro0a" path="res://_Assets/Spritesheet/SmallSlime_Green.png" id="3_tcsi5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tcsi5"]
+radius = 26.25
+height = 80.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxq4d"]
+atlas = ExtResource("3_tcsi5")
+region = Rect2(0, 0, 310, 310)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_viwxf"]
+atlas = ExtResource("3_tcsi5")
+region = Rect2(310, 0, 310, 310)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_as8ut"]
+atlas = ExtResource("3_tcsi5")
+region = Rect2(620, 0, 310, 310)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myf52"]
+atlas = ExtResource("3_tcsi5")
+region = Rect2(930, 0, 310, 310)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l7ctk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxq4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_viwxf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_as8ut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_myf52")
+}],
+"loop": 1,
+"name": &"slim",
+"speed": 6.0
+}]
+
+[node name="Enemy" unique_id=600502477 instance=ExtResource("1_tcsi5")]
+script = ExtResource("2_cxq4d")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=587424215]
+position = Vector2(0, -17)
+scale = Vector2(1, 0.8)
+
+[node name="CollisionShape2D2" parent="HitArea" parent_id_path=PackedInt32Array(1115411835) index="0" unique_id=2008793250]
+position = Vector2(0, -17)
+scale = Vector2(1, 0.8)
+shape = SubResource("CapsuleShape2D_tcsi5")
+
+[node name="Sprite" parent="." index="3" unique_id=1445111960]
+position = Vector2(0, -1)
+
+[node name="AnimateSprite" type="AnimatedSprite2D" parent="Sprite" index="0" unique_id=87960724]
+position = Vector2(1.5258789e-05, -39)
+scale = Vector2(0.31612903, 0.316129)
+sprite_frames = SubResource("SpriteFrames_l7ctk")
+animation = &"slim"
+frame_progress = 0.6360321
+flip_h = true
+
+[node name="Ray" parent="Sprite" index="1" unique_id=1415425330]
+visible = false

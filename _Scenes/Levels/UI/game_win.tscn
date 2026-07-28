@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b46lxwc5r3dy4"]
+
+[ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://_Scenes/Prefabs/theme.tres" id="1_5l1gm"]
+[ext_resource type="Script" uid="uid://bep8mbeqgesep" path="res://_Scripts/game_win.gd" id="1_w70je"]
+[ext_resource type="PackedScene" uid="uid://puc4l62gx6et" path="res://_Scenes/Prefabs/Uis/button_exit.tscn" id="2_81byk"]
+[ext_resource type="PackedScene" uid="uid://b6tvaxw54wsq0" path="res://_Scenes/Levels/menu.tscn" id="4_rjrd5"]
+[ext_resource type="PackedScene" path="res://_Scenes/Levels/level_01.tscn" id="5_7wwyv"]
+
+[node name="GameOver" type="Node2D" unique_id=826370530]
+script = ExtResource("1_w70je")
+
+[node name="Title" type="Label" parent="." unique_id=1965507633]
+offset_left = 384.0
+offset_top = 90.0
+offset_right = 873.0
+offset_bottom = 342.0
+theme = ExtResource("1_5l1gm")
+theme_override_colors/font_color = Color(0.36862746, 0.9137255, 0.1882353, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 160
+text = "You Win"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btnExit" parent="." unique_id=1633606001 instance=ExtResource("2_81byk")]
+offset_left = 475.0
+offset_top = 396.0
+offset_right = 601.0
+offset_bottom = 450.0
+text = "Exit to Menu"
+exitToScene = ExtResource("4_rjrd5")
+
+[node name="btnPlay" parent="." unique_id=1146872882 instance=ExtResource("2_81byk")]
+offset_left = 634.0
+offset_top = 396.0
+offset_right = 760.0
+offset_bottom = 450.0
+shortcut = null
+text = "Play Again"
+exitToScene = ExtResource("5_7wwyv")
+play = true

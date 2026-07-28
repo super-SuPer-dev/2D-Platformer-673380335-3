@@ -1,0 +1,358 @@
+[gd_scene format=4 uid="uid://didoh0y6w5ks"]
+
+[ext_resource type="Script" uid="uid://cwm5w1bxx3js3" path="res://_Scripts/base_level.gd" id="1_77qp8"]
+[ext_resource type="Texture2D" uid="uid://cscpg2omvy0cb" path="res://_Assets/Textures/1 - Grassland/Background parts/5 - Sky_color.png" id="2_ov1kg"]
+[ext_resource type="PackedScene" uid="uid://cyti38f0lagf2" path="res://_Scenes/Prefabs/Interactables/level_finish_door.tscn" id="2_oyepl"]
+[ext_resource type="Texture2D" uid="uid://1fjgf6dtee62" path="res://_Assets/Textures/1 - Grassland/Background parts/4 - Cloud_cover_2.png" id="3_i7l1x"]
+[ext_resource type="TileSet" uid="uid://delxbrjbceio5" path="res://_Assets/Textures/Grassland.tres" id="3_ov1kg"]
+[ext_resource type="PackedScene" uid="uid://b46lxwc5r3dy4" path="res://_Scenes/Levels/UI/game_win.tscn" id="3_s3n32"]
+[ext_resource type="Texture2D" uid="uid://uu1j3wwdqai3" path="res://_Assets/Textures/1 - Grassland/Background parts/3 - Cloud_cover_1.png" id="4_7fsea"]
+[ext_resource type="PackedScene" uid="uid://w7m6tehvvy3g" path="res://_Scenes/Actors/player.tscn" id="4_i7l1x"]
+[ext_resource type="PackedScene" uid="uid://cdwabmqtlxr1y" path="res://_Scenes/Levels/UI/game_ui.tscn" id="5_7fsea"]
+[ext_resource type="Texture2D" uid="uid://bjqv6yr03ligl" path="res://_Assets/Textures/1 - Grassland/Background parts/2 - Hills.png" id="5_8lh2j"]
+[ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://_Scenes/Prefabs/theme.tres" id="6_8lh2j"]
+[ext_resource type="Texture2D" uid="uid://ca2dy1eoumt1f" path="res://_Assets/Textures/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="6_deayn"]
+[ext_resource type="AudioStream" uid="uid://b6qosmsqr2bg3" path="res://_Assets/Sound/Musics/The-Coin-Op-Conquistador.mp3" id="8_te7oc"]
+[ext_resource type="PackedScene" uid="uid://cqs760tu65ofn" path="res://_Scenes/Actors/monster_slim2.tscn" id="9_t6c35"]
+[ext_resource type="PackedScene" uid="uid://bs70y1kitjd3r" path="res://_Scenes/Actors/enemy_spawn.tscn" id="14_oyepl"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_x6yti"]
+
+[node name="BaseLevel" type="Node2D" unique_id=1997201631]
+script = ExtResource("1_77qp8")
+
+[node name="PARA" type="Node2D" parent="." unique_id=1482087948]
+position = Vector2(60, -372)
+metadata/_edit_group_ = true
+
+[node name="Parallax2D" type="Parallax2D" parent="PARA" unique_id=2058938481]
+texture_filter = 1
+scroll_scale = Vector2(0, 1)
+scroll_offset = Vector2(-1352, 358)
+repeat_size = Vector2(1751.035, 0)
+repeat_times = 3
+
+[node name="5SkyColor" type="Sprite2D" parent="PARA/Parallax2D" unique_id=665974685]
+position = Vector2(715.52, -75.67999)
+scale = Vector2(6.08, 6.08)
+texture = ExtResource("2_ov1kg")
+
+[node name="Parallax2D2" type="Parallax2D" parent="PARA" unique_id=1756379394]
+texture_filter = 1
+scroll_scale = Vector2(0.1, 1)
+scroll_offset = Vector2(-1352, 358)
+repeat_size = Vector2(1751.035, 0)
+repeat_times = 3
+
+[node name="4CloudCover2" type="Sprite2D" parent="PARA/Parallax2D2" unique_id=894997242]
+position = Vector2(715.52, -75.67999)
+scale = Vector2(6.08, 6.08)
+texture = ExtResource("3_i7l1x")
+
+[node name="Parallax2D3" type="Parallax2D" parent="PARA" unique_id=24636808]
+texture_filter = 1
+scroll_scale = Vector2(0.15, 1)
+scroll_offset = Vector2(-1352, 358)
+repeat_size = Vector2(1751.035, 0)
+repeat_times = 3
+
+[node name="3CloudCover1" type="Sprite2D" parent="PARA/Parallax2D3" unique_id=1048460913]
+position = Vector2(715.52, -75.67999)
+scale = Vector2(6.08, 6.08)
+texture = ExtResource("4_7fsea")
+
+[node name="Parallax2D4" type="Parallax2D" parent="PARA" unique_id=187464181]
+texture_filter = 1
+scroll_scale = Vector2(0.2, 1)
+scroll_offset = Vector2(-1352, 358)
+repeat_size = Vector2(1751.035, 0)
+repeat_times = 3
+
+[node name="2Hills" type="Sprite2D" parent="PARA/Parallax2D4" unique_id=1513827631]
+position = Vector2(715.52, -75.67999)
+scale = Vector2(6.08, 6.08)
+texture = ExtResource("5_8lh2j")
+
+[node name="Parallax2D5" type="Parallax2D" parent="PARA" unique_id=1319131949]
+texture_filter = 1
+scroll_scale = Vector2(0.3, 1)
+scroll_offset = Vector2(-1352, 358)
+repeat_size = Vector2(1751.035, 0)
+repeat_times = 3
+
+[node name="1ForegroundScenery" type="Sprite2D" parent="PARA/Parallax2D5" unique_id=2048894592]
+position = Vector2(715.52, -75.67999)
+scale = Vector2(6.08, 6.08)
+texture = ExtResource("6_deayn")
+
+[node name="LevelFinishDoor" parent="." unique_id=1788542095 instance=ExtResource("2_oyepl")]
+z_index = 1
+texture_filter = 1
+position = Vector2(-1808.0001, 344.00003)
+scale = Vector2(1.503324, 1.503324)
+next_scene = ExtResource("3_s3n32")
+
+[node name="Level" type="Node2D" parent="." unique_id=1752500785]
+
+[node name="Background1" type="Parallax2D" parent="Level" unique_id=1072429833]
+z_index = -10
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(1152, 0)
+repeat_times = 2
+
+[node name="Background2" type="Parallax2D" parent="Level" unique_id=1070008654]
+z_index = -10
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(1152, 0)
+repeat_times = 2
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="Level" unique_id=1417736159]
+texture_filter = 1
+position = Vector2(2886, -1898)
+scale = Vector2(3.7993205, 3.7993205)
+tile_map_data = PackedByteArray("AADE/yYAAgAEAAEAAAC9/yYAAgAEAAEAAAC+/yYAAgAEAAEAAAC//yYAAgAEAAEAAADA/yYAAgAEAAEAAADB/yYAAgAEAAEAAADC/yYAAgAEAAEAAADD/yYAAgAEAAEAAACx/yYAAgAEAAEAAACx/ycAAgAEAAIAAACx/ygAAgAEAAIAAACx/ykAAgAEAAIAAACx/yoAAgAEAAIAAACx/ysAAgAEAAIAAACx/ywAAgAEAAIAAACx/y0AAgAEAAIAAACx/y4AAgAEAAIAAACx/y8AAgAEAAIAAACx/zAAAgAEAAIAAACx/zEAAgAEAAIAAACx/zIAAgAEAAIAAACx/zMAAgAEAAIAAACy/yYAAgAEAAEAAACy/ycAAgAEAAIAAACy/ygAAgAEAAIAAACy/ykAAgAEAAIAAACy/yoAAgAEAAIAAACy/ysAAgAEAAIAAACy/ywAAgAEAAIAAACy/y0AAgAEAAIAAACy/y4AAgAEAAIAAACy/y8AAgAEAAIAAACy/zAAAgAEAAIAAACy/zEAAgAEAAIAAACy/zIAAgAEAAIAAACy/zMAAgAEAAIAAACz/yYAAgAEAAEAAACz/ycAAgAEAAIAAACz/ygAAgAEAAIAAACz/ykAAgAEAAIAAACz/yoAAgAEAAIAAACz/ysAAgAEAAIAAACz/ywAAgAEAAIAAACz/y0AAgAEAAIAAACz/y4AAgAEAAIAAACz/y8AAgAEAAIAAACz/zAAAgAEAAIAAACz/zEAAgAEAAIAAACz/zIAAgAEAAIAAACz/zMAAgAEAAIAAAC0/yYAAgAEAAEAAAC1/yYAAgAEAAEAAAC2/yYAAgAEAAEAAAC3/yYAAgAEAAEAAAC4/yYAAgAEAAEAAAC5/yYAAgAEAAEAAAC6/yYAAgAEAAEAAAC7/yYAAgAEAAEAAAC8/yYAAgAEAAEAAADF/yYAAgAEAAEAAADG/yYAAgAEAAEAAADH/yYAAgAEAAEAAADI/yYAAgAEAAEAAADJ/yYAAgAEAAEAAADK/yYAAgAEAAEAAADL/yYAAgAEAAEAAADM/yYAAgAEAAEAAADN/yYAAgAEAAEAAADO/yYAAgAEAAEAAADP/yYAAgAEAAEAAADQ/yYAAgAEAAEAAADQ/ycAAgAEAAEAAADR/ycAAgAEAAEAAADS/ycAAgAEAAEAAADT/ycAAgAEAAEAAADU/ycAAgAEAAEAAADV/ycAAgAEAAEAAADW/ycAAgAEAAEAAADX/ycAAgAEAAEAAADY/ycAAgAEAAEAAADZ/ycAAgAEAAEAAADa/ycAAgAEAAEAAADb/ycAAgAEAAEAAADc/ycAAgAEAAEAAADd/ycAAgAEAAEAAADe/yYAAgAEAAEAAADe/yUAAgAEAAEAAADf/yUAAgAEAAEAAADg/yUAAgAEAAEAAACk/xgAAgAFAAIAAACk/xkAAgAFAAIAAACk/xoAAgAFAAIAAACk/xsAAgAFAAIAAACk/xwAAgAFAAIAAACk/x0AAgAFAAIAAACk/x4AAgAFAAIAAACk/x8AAgAFAAIAAACk/yAAAgAFAAIAAACk/yEAAgAFAAIAAACk/yIAAgAFAAIAAACk/yMAAgAFAAIAAACk/yQAAgAFAAIAAACk/yUAAgAFAAIAAACk/yYAAgAEAAEAAACl/yYAAgAEAAEAAACm/yYAAgAEAAEAAACn/yYAAgAEAAEAAACo/yYAAgAEAAEAAACp/yYAAgAEAAEAAACq/yYAAgAEAAEAAACr/yYAAgAEAAEAAACs/yYAAgAEAAEAAACt/yYAAgAEAAEAAACu/yYAAgAEAAEAAACv/yYAAgAEAAEAAACw/yYAAgAEAAEAAAA=")
+tile_set = ExtResource("3_ov1kg")
+metadata/_edit_lock_ = true
+
+[node name="EnemySpawn" parent="Level" unique_id=1463539825 instance=ExtResource("14_oyepl")]
+position = Vector2(-1497, 272)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn2" parent="Level" unique_id=1335230457 instance=ExtResource("14_oyepl")]
+position = Vector2(-1371, 283)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn3" parent="Level" unique_id=1902238515 instance=ExtResource("14_oyepl")]
+position = Vector2(-1416, 232)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn4" parent="Level" unique_id=215054935 instance=ExtResource("14_oyepl")]
+position = Vector2(-1451, 334)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn5" parent="Level" unique_id=145343058 instance=ExtResource("14_oyepl")]
+position = Vector2(-1594, 230)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn6" parent="Level" unique_id=648656916 instance=ExtResource("14_oyepl")]
+position = Vector2(-1610, 326)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn7" parent="Level" unique_id=1644374001 instance=ExtResource("14_oyepl")]
+position = Vector2(-1225, 195)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn8" parent="Level" unique_id=1205211121 instance=ExtResource("14_oyepl")]
+position = Vector2(-1253, 316)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn9" parent="Level" unique_id=227746162 instance=ExtResource("14_oyepl")]
+position = Vector2(-1301, 224)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn10" parent="Level" unique_id=703611255 instance=ExtResource("14_oyepl")]
+position = Vector2(-1319, 355)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn11" parent="Level" unique_id=21661938 instance=ExtResource("14_oyepl")]
+position = Vector2(-1202, 244)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn12" parent="Level" unique_id=693094088 instance=ExtResource("14_oyepl")]
+position = Vector2(-1183, 340)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn13" parent="Level" unique_id=1096016818 instance=ExtResource("14_oyepl")]
+position = Vector2(-1400, 160)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn14" parent="Level" unique_id=67600246 instance=ExtResource("14_oyepl")]
+position = Vector2(-1514, 144)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn15" parent="Level" unique_id=761735899 instance=ExtResource("14_oyepl")]
+position = Vector2(-1597, 116)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn16" parent="Level" unique_id=1591534298 instance=ExtResource("14_oyepl")]
+position = Vector2(-1597, 116)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn17" parent="Level" unique_id=1310178940 instance=ExtResource("14_oyepl")]
+position = Vector2(-1491, 6)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn18" parent="Level" unique_id=2033082855 instance=ExtResource("14_oyepl")]
+position = Vector2(-1410, -34)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn19" parent="Level" unique_id=1601326734 instance=ExtResource("14_oyepl")]
+position = Vector2(-1588, -36)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn20" parent="Level" unique_id=823985735 instance=ExtResource("14_oyepl")]
+position = Vector2(-1219, -71)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn21" parent="Level" unique_id=1583965536 instance=ExtResource("14_oyepl")]
+position = Vector2(-1295, -42)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn22" parent="Level" unique_id=2142531540 instance=ExtResource("14_oyepl")]
+position = Vector2(-1196, -22)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn23" parent="Level" unique_id=1569942764 instance=ExtResource("14_oyepl")]
+position = Vector2(-1394, -106)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn24" parent="Level" unique_id=853469150 instance=ExtResource("14_oyepl")]
+position = Vector2(-1508, -122)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn25" parent="Level" unique_id=280534347 instance=ExtResource("14_oyepl")]
+position = Vector2(-1591, -150)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn26" parent="Level" unique_id=387303496 instance=ExtResource("14_oyepl")]
+position = Vector2(-1591, -150)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn27" parent="Level" unique_id=1074727205 instance=ExtResource("14_oyepl")]
+position = Vector2(-1457, -233)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn28" parent="Level" unique_id=630331974 instance=ExtResource("14_oyepl")]
+position = Vector2(-1376, -273)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn29" parent="Level" unique_id=1201317020 instance=ExtResource("14_oyepl")]
+position = Vector2(-1554, -275)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn30" parent="Level" unique_id=1777224785 instance=ExtResource("14_oyepl")]
+position = Vector2(-1185, -310)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn31" parent="Level" unique_id=1081108906 instance=ExtResource("14_oyepl")]
+position = Vector2(-1261, -281)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn32" parent="Level" unique_id=1629061567 instance=ExtResource("14_oyepl")]
+position = Vector2(-1162, -261)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn33" parent="Level" unique_id=1949555733 instance=ExtResource("14_oyepl")]
+position = Vector2(-1360, -345)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn34" parent="Level" unique_id=288447820 instance=ExtResource("14_oyepl")]
+position = Vector2(-1474, -361)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn35" parent="Level" unique_id=290427138 instance=ExtResource("14_oyepl")]
+position = Vector2(-1557, -389)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="EnemySpawn36" parent="Level" unique_id=837418371 instance=ExtResource("14_oyepl")]
+position = Vector2(-1557, -389)
+enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+max_instance = 5
+
+[node name="Player" parent="." unique_id=850213228 instance=ExtResource("4_i7l1x")]
+unique_name_in_owner = true
+z_index = 1
+position = Vector2(-433.00006, 398)
+
+[node name="Coins" type="Node2D" parent="." unique_id=1530662565]
+z_index = 2
+
+[node name="Enemies" type="Node2D" parent="." unique_id=1580630701]
+
+[node name="UserInterface" parent="." unique_id=1799764374 instance=ExtResource("5_7fsea")]
+
+[node name="Label" type="Label" parent="UserInterface" unique_id=1103718868]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.0
+offset_top = -11.5
+offset_right = 27.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_8lh2j")
+theme_override_font_sizes/font_size = 60
+text = "Level x"
+metadata/_edit_lock_ = true
+
+[node name="Text" type="Node2D" parent="." unique_id=416249055]
+
+[node name="Panel2" type="Panel" parent="Text" unique_id=340292044]
+offset_left = -1094.0
+offset_top = 240.0
+offset_right = -818.0
+offset_bottom = 275.0
+
+[node name="Label10" type="Label" parent="Text" unique_id=1801589512]
+offset_left = -1074.0
+offset_top = 244.0
+offset_right = -767.0
+offset_bottom = 275.0
+text = "There are too many of them!"
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1580159016]
+stream = ExtResource("8_te7oc")
+volume_db = -5.0
+autoplay = true
+bus = &"music"
+parameters/looping = true
+
+[node name="KillZone" type="Area2D" parent="." unique_id=898712258]
+position = Vector2(47, 952)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=894546188]
+position = Vector2(1093, 745)
+shape = SubResource("WorldBoundaryShape2D_x6yti")
+
+[connection signal="hit_enemy" from="Player" to="." method="_on_player_hit_enemy"]
+[connection signal="hit_trap" from="Player" to="." method="_on_player_hit_trap"]
+[connection signal="body_entered" from="KillZone" to="." method="_on_area_2d_body_entered"]
