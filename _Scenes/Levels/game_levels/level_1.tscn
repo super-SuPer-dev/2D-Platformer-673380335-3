@@ -170,7 +170,8 @@ text = "Level 1"
 metadata/_edit_lock_ = true
 
 [node name="JumpPad" parent="." unique_id=1949625588 instance=ExtResource("15_goc8t")]
-position = Vector2(2036, 810)
+position = Vector2(2023, 816.00006)
+scale = Vector2(2.1280944, 1.2929387)
 
 [node name="Text" type="Node2D" parent="." unique_id=416249055]
 

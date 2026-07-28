@@ -12,7 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://bjqv6yr03ligl" path="res://_Assets/Textures/1 - Grassland/Background parts/2 - Hills.png" id="5_8lh2j"]
 [ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://_Scenes/Prefabs/theme.tres" id="6_8lh2j"]
 [ext_resource type="Texture2D" uid="uid://ca2dy1eoumt1f" path="res://_Assets/Textures/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="6_deayn"]
-[ext_resource type="PackedScene" uid="uid://cqs760tu65ofn" path="res://_Scenes/Actors/monster_slim2.tscn" id="9_t6c35"]
+[ext_resource type="PackedScene" uid="uid://cqs760tu65ofn" path="res://_Scenes/Actors/monster_big_slim.tscn" id="9_t6c35"]
+[ext_resource type="PackedScene" uid="uid://cuyhbojgyjuwd" path="res://_Scenes/Actors/monster_slim2.tscn" id="12_deayn"]
 [ext_resource type="PackedScene" uid="uid://bs70y1kitjd3r" path="res://_Scenes/Actors/enemy_spawn.tscn" id="14_oyepl"]
 [ext_resource type="PackedScene" uid="uid://uahmki0g4j1h" path="res://_Scenes/Prefabs/Collectables/Weapon/bomb.tscn" id="15_7fsea"]
 [ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://_Scenes/Prefabs/Collectables/Point/gem.tscn" id="16_8lh2j"]
@@ -294,7 +295,7 @@ max_instance = 5
 
 [node name="EnemySpawn36" parent="Level" unique_id=837418371 instance=ExtResource("14_oyepl")]
 position = Vector2(-1557, -389)
-enemy_scenes = Array[PackedScene]([ExtResource("9_t6c35")])
+enemy_scenes = Array[PackedScene]([ExtResource("12_deayn")])
 max_instance = 5
 
 [node name="Player" parent="." unique_id=850213228 instance=ExtResource("4_i7l1x")]

@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://ca2dy1eoumt1f" path="res://_Assets/Textures/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="6_5ero1"]
 [ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://_Scenes/Prefabs/theme.tres" id="6_hbtbb"]
 [ext_resource type="PackedScene" uid="uid://7oxbgu64i56r" path="res://_Scenes/Prefabs/Interactables/Helper/Item/jump_potion.tscn" id="7_43sbf"]
-[ext_resource type="PackedScene" uid="uid://cqs760tu65ofn" path="res://_Scenes/Actors/monster_slim2.tscn" id="8_8na01"]
+[ext_resource type="PackedScene" uid="uid://cqs760tu65ofn" path="res://_Scenes/Actors/monster_big_slim.tscn" id="8_8na01"]
 [ext_resource type="PackedScene" uid="uid://dabag2r57aued" path="res://_Scenes/Prefabs/Interactables/Helper/Item/heal_potion.tscn" id="9_8lred"]
 [ext_resource type="PackedScene" uid="uid://bp4l1nlnh8oq1" path="res://_Scenes/Prefabs/Interactables/Traps/trap_2.tscn" id="11_fqdub"]
 [ext_resource type="PackedScene" uid="uid://rg0efoa2qhth" path="res://_Scenes/Prefabs/Interactables/Helper/Item/life_potion.tscn" id="12_mdtri"]
@@ -23,6 +23,7 @@
 [ext_resource type="AudioStream" uid="uid://cvwled7ynlj5j" path="res://_Assets/Sound/bgm.ogg" id="15_4lett"]
 [ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://_Scenes/Prefabs/Collectables/Point/gem.tscn" id="21_ap4hm"]
 [ext_resource type="PackedScene" uid="uid://bwk1x0qiht02k" path="res://_Scenes/Prefabs/Interactables/Helper/moving_platform.tscn" id="23_5ero1"]
+[ext_resource type="PackedScene" uid="uid://cuyhbojgyjuwd" path="res://_Scenes/Actors/monster_slim2.tscn" id="24_q6qgi"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_x6yti"]
 
@@ -353,8 +354,13 @@ position = Vector2(-71.21504, -45.540585)
 [node name="MarkerB" parent="MovingPlatform" index="3" unique_id=1663037517]
 position = Vector2(112.44479, 7.9201016)
 
-[node name="Polygon2D" parent="MovingPlatform" index="4" unique_id=1375079267]
-color = Color(0, 0, 0, 1)
+[node name="Enemy" parent="MovingPlatform" unique_id=964376194 instance=ExtResource("24_q6qgi")]
+position = Vector2(-238.00816, -136.62175)
+scale = Vector2(0.17178485, 0.17178485)
+
+[node name="Enemy2" parent="MovingPlatform" unique_id=1752914328 instance=ExtResource("24_q6qgi")]
+position = Vector2(-871.4472, 138.60178)
+scale = Vector2(0.31136227, 0.31136227)
 
 [connection signal="hit_enemy" from="Player" to="." method="_on_player_hit_enemy"]
 [connection signal="hit_trap" from="Player" to="." method="_on_player_hit_trap"]

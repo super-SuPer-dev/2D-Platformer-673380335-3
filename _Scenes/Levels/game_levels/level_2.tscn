@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cdwabmqtlxr1y" path="res://_Scenes/Levels/UI/game_ui.tscn" id="5_phpex"]
 [ext_resource type="Texture2D" uid="uid://ca2dy1eoumt1f" path="res://_Assets/Textures/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="6_14uvl"]
 [ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://_Scenes/Prefabs/theme.tres" id="6_weihq"]
-[ext_resource type="PackedScene" uid="uid://cqs760tu65ofn" path="res://_Scenes/Actors/monster_slim2.tscn" id="8_hrqyo"]
+[ext_resource type="PackedScene" uid="uid://cqs760tu65ofn" path="res://_Scenes/Actors/monster_big_slim.tscn" id="8_hrqyo"]
 [ext_resource type="PackedScene" uid="uid://dabag2r57aued" path="res://_Scenes/Prefabs/Interactables/Helper/Item/heal_potion.tscn" id="9_408ju"]
 [ext_resource type="PackedScene" uid="uid://bwk1x0qiht02k" path="res://_Scenes/Prefabs/Interactables/Helper/moving_platform.tscn" id="13_gtnpm"]
 [ext_resource type="PackedScene" uid="uid://dqocdd23rrnsn" path="res://_Scenes/Prefabs/Collectables/Point/coin.tscn" id="13_h8oud"]
